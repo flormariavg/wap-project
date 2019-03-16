@@ -35,18 +35,20 @@ public class Checkout extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
-		if (session.getAttribute("shoppingCart") != null) {
-			System.out.println("Cart********************************");
-			System.out.println("shoppingCart" + shoppingCart);
-
-			shoppingCart.calculatedTotalPrice();
-			shoppingCart.calculateShipping();
-
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
-		} else {
-			System.out.println("Error****************");
-
-		}
+//		if (session.getAttribute("shoppingCart") != null) {
+//			System.out.println("Cart********************************");
+//			System.out.println("shoppingCart" + shoppingCart);
+//
+//			shoppingCart.calculatedTotalPrice();
+//			shoppingCart.calculateShipping();
+//
+//			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+//		} else {
+//			System.out.println("Error****************");
+//
+//		}
+		
+		request.getRequestDispatcher("checkout.jsp").forward(request, response);
 
 	}
 
@@ -60,7 +62,7 @@ public class Checkout extends HttpServlet {
 		System.out.println("Proceed checkout :::: ");
 
 		String jsonSting = request.getParameter("product");
-		Product product = mapper.readValue(request.getParameter("product"), Product.class);
+//		Product product = mapper.readValue(request.getParameter("product"), Product.class);
 
 	}
 
