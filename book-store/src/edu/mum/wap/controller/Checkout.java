@@ -33,6 +33,8 @@ HttpSession session= request.getSession();
 			System.out.println("Cart********************************");
 			System.out.println("shoppingCart"+shoppingCart);
 			
+			shoppingCart.calculatedTotalPrice();
+			shoppingCart.calculateShipping();
 			
 			request.getRequestDispatcher("checkout.jsp").forward(request, response);
 		}else {

@@ -74,10 +74,11 @@
 
 			<div id="templatemo_content_left" class="shopping_cart">
 				<h1>Subtotal</h1>
-				<h3>Total Items: ${shoppingcart.totalItems}</h3>
-				<h3>Books Price: ${product.calculatedTotalPrice}</h3>
+				<h3>Total Items: ${shoppingCart.totalItems}</h3>
+				<h3>Books Price: ${shoppingCart.totalPrice}</h3>
 				<div class="buy_now_button">
-					<button onclick="">Proceed to checkout</button>
+					<a href="<c:url value="/checkout"></c:url>">Proceed to checkout</a>
+<!-- 					<button onclick="">Proceed to checkout</button> -->
 				</div>
 			</div>
 
