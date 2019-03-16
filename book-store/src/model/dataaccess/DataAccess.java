@@ -15,4 +15,5 @@ public interface DataAccess {
 	public ShoppingCart readShopList();
 	public void saveNewItem(Item i);
 	public List<Item> readItemList();
+	public Item findItemByCode(String code);
 }

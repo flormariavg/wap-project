@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.mum.wap.model.Item;
-import edu.mum.wap.model.Product;
+import model.dataaccess.DataAccess;
+import model.dataaccess.DataAccessFacade;
 
 /**
  * Servlet implementation class LoadItem
@@ -18,7 +19,6 @@ import edu.mum.wap.model.Product;
 @WebServlet("/store")
 public class LoadItem extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -36,7 +36,9 @@ public class LoadItem extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
 		
-		List<Item> products = Product.setItems();
+		DataAccess da = new DataAccessFacade();
+		
+		List<Item> products= da.readItemList();
 		for (Item item : products) {
 			System.out.println(item);
 		}
@@ -57,13 +59,6 @@ public class LoadItem extends HttpServlet {
 
 		
 	}
+	
 
-	public static void main(String[] args) {
-		List<Item> products = Product.setItems();
-		for (Item item : products) {
-			System.out.println(item);
-			
-		}
-		
-	}
 }

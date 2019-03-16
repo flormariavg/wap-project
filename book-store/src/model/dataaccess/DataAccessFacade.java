@@ -18,8 +18,7 @@ public class DataAccessFacade implements DataAccess {
 		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS;
 	}
 
-	public static final String OUTPUT_DIR = System.getProperty("user.dir")
-			+ "\\src\\model\\dataaccess\\storage";
+	public static final String OUTPUT_DIR = "c:\\temp\\dataaccess\\storage";
 	public static final String DATE_PATTERN = "MM/dd/yyyy";
 
 	static void saveToStorage(StorageType type, Object ob) {
@@ -59,7 +58,9 @@ public class DataAccessFacade implements DataAccess {
 	}
 
 	public void saveNewItem(Item i) {
-	    List<Item> items=readItemList();
+		//Descomentar esta lina para q sirva
+//		List<Item> items = new ArrayList<>();
+	    List<Item> items = readItemList();
 	    //String ProdId = p.getProduct().getCode();
 	    items.add(i);
 	    saveToStorage(StorageType.ITEMS,items);
@@ -69,6 +70,18 @@ public class DataAccessFacade implements DataAccess {
 	public List<Item> readItemList() {
 		//Returns a product list
 		return (List<Item>) readFromStorage(StorageType.ITEMS);
+	}
+	
+	public Item findItemByCode(String code) {
+		//Returns a product list
+		List<Item> items =
+				(List<Item>) readFromStorage(StorageType.ITEMS);
+		for(Item item: items) {
+			if(item.getCode().equals(code)) {
+				return item;
+			}
+		}
+		return null;
 	}
 	
 	public void saveNewProduct(Product p) {

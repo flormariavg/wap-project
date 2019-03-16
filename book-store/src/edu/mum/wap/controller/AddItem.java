@@ -1,7 +1,6 @@
 package edu.mum.wap.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +12,8 @@ import javax.servlet.http.HttpSession;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import model.dataaccess.DataAccess;
+import model.dataaccess.DataAccessFacade;
 
 /**
  * Servlet implementation class AddItem
@@ -34,19 +35,9 @@ public class AddItem extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println(request.getParameter("item"));
-		
-		Item item= new Item();
-		List<Item> products = Product.setItems();
-		for (Item item2 : products) {
-			if(item2.getCode().equals(request.getParameter("item"))) {
-				item= item2;
-				break;
-			}
-			
-		}
-		
-		
+		String code = request.getParameter("item");
+		DataAccess da = new DataAccessFacade();
+		Item item = da.findItemByCode(code);
 		Product product= new Product();
 		product.setItem(item);
 		product.setQuantity(1);
@@ -57,7 +48,6 @@ public class AddItem extends HttpServlet {
 		if(session.getAttribute("shoppingCart")==null)
 			shoppingCart= new ShoppingCart();
 		
-		shoppingCart.addProducts(product);
 		shoppingCart.addProducts(product);
 		
 		System.out.println("shoppingCart"+shoppingCart);

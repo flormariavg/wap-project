@@ -1,6 +1,7 @@
 /build/
 /target/
 /.classpath
+/bin/
 /RemoteSystemsTempFiles/
 /Servers/
 /.metadata/

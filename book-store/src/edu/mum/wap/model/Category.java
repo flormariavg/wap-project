@@ -1,6 +1,6 @@
 package edu.mum.wap.model;
 
-enum Category {
+public enum Category {
 	
 	children( "Children's"),
 	teen("Teen and Young Adult"),

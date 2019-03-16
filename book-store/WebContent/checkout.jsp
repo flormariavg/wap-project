@@ -5,6 +5,9 @@
 <head>
 <title>Checkout</title>
 <link href="./resouces/css/store.css" type="text/css" rel="stylesheet">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/checkout.js"></script>
 </head>
 <body>
 	<div class="left">
@@ -15,7 +18,7 @@
 			<table>
 				<tr>
 					<td>Name:</td>
-					<td><input name="name"></td>
+					<td><input id="name"></td>
 				</tr>
 				<tr>
 					<td>Address:</td>
@@ -90,11 +93,11 @@
 			<table>
 				<tr>
 					<td>Products:</td>
-					<td><label class="label-checkout" name="totalproducts">$60.00</label></td>
+					<td><label class="label-checkout" name="totalproducts">${shoppingCart.totalPrice}</label></td>
 				</tr>
 				<tr>
 					<td>Shipping:</td>
-					<td><label class="label-checkout" name="shipping">$2.41</label></td>
+					<td><label class="label-checkout" name="shipping">${shoppingCart.shipping}</label></td>
 				</tr>
 			</table>
 
@@ -105,15 +108,15 @@
 						<table>
 				<tr>
 					<td>Total:</td>
-					<td><label class="label-checkout" name="totalall">$62.41</label></td>
+					<td><label class="label-checkout" name="totalall">${shoppingCart.total}</label></td>
 				</tr>
 			</table>
 		</div>
 		<div id="div3">
-			<form action="/login" method="post">
-				<button class="button-checkout">Proceed</button>
+			
+				<button id="btn_proceed_checkout" type="button" class="button-checkout">Proceed</button>
 				<br>
-			</form>
+			
 		</div>
 	</div>
 </body>

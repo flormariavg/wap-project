@@ -1,11 +1,24 @@
 package edu.mum.wap.model;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String firstName;
 	private String lastName;
 	private Address address;
 	private String email;
 	
+	public Person(String firstName, String lastName, Address address, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.email = email;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

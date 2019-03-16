@@ -14,6 +14,9 @@ public class ShoppingCart implements Serializable{
 
 	private User user;
 	List<Product> products;
+	private int totalItems = 0;
+	private Double totalPrice = 0.0;
+	private Double shipping;
 	
 	public ShoppingCart() {
 		// TODO Auto-generated constructor stub
@@ -26,11 +29,11 @@ public class ShoppingCart implements Serializable{
 
 	public void addProducts(Product product) {
 		this.products.add(product);
+		this.totalItems += product.getQuantity();
 	}
 	
-	public Double calculatedTotalPrice() {
-		return products.stream().mapToDouble(y-> y.getItem().getUnitPrice() * y.getQuantity()).sum();
-
+	public void calculatedTotalPrice() {
+		this.totalPrice = products.stream().mapToDouble(y-> y.getItem().getUnitPrice() * y.getQuantity()).sum();
 	}
 	public User getUser() {
 		return user;
@@ -40,14 +43,32 @@ public class ShoppingCart implements Serializable{
 		this.user = user;
 	}
 
-	public double calculateShipping() {
-		Random r = new Random();
-		DecimalFormat formatter = new DecimalFormat("#0,00");
-		double shipping=1000 * r.nextDouble();
-		return  Double.parseDouble(formatter.format(shipping));
+	public int getTotalItems() {
+		return totalItems;
+	}
+
+	public String getTotalPrice() {
+		return format(totalPrice);
+	}
+
+	public String getShipping() {
+		return format(shipping);
 	}
 	
-	public static List<Item> setProducts() {
+	public String getTotal() {
+		return format(totalPrice.doubleValue() + shipping.doubleValue());
+	}
+
+	public String format(Double value) {
+		DecimalFormat formatter = new DecimalFormat("#0,00");
+		return formatter.format(value);
+	}
+	public void calculateShipping() {
+		Random r = new Random();
+		this.shipping=1000 * r.nextDouble();
+	}
+	
+/*	public static List<Item> setProducts() {
 		Item item= new Item("book1", "Sciense Fiction", 10, 2, true);
 		Item item2= new Item("book2", "Technology", 10, 2, true);
 		Item item3= new Item("book3", "Stories", 10, 2, true);
@@ -62,7 +83,7 @@ public class ShoppingCart implements Serializable{
 		products.add(item4);
 		
 		return products;
-	}
+	}*/
 
 	public void checkout(){
 	}

@@ -42,7 +42,8 @@ public class Cart extends HttpServlet {
 		if(session.getAttribute("shoppingCart")!=null) {
 			System.out.println("Cart********************************");
 			System.out.println("shoppingCart"+shoppingCart);
-			
+			shoppingCart.calculatedTotalPrice();
+			shoppingCart.calculateShipping();
 			request.setAttribute("shoppingCart", shoppingCart);
 			
 			
@@ -50,10 +51,6 @@ public class Cart extends HttpServlet {
 		}else
 			System.out.println("Error****************");
 			
-		
-		
-		
-		
 	}
 
 	/**

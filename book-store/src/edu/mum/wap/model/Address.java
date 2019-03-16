@@ -1,7 +1,13 @@
 package edu.mum.wap.model;
 
-public class Address {
+import java.io.Serializable;
+
+public class Address implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String addressLine;
 	private String city;
 	private String state;
@@ -9,6 +15,16 @@ public class Address {
 	private String phoneNumber;
 	private String zipCode;
 	
+	
+	public Address(String addressLine, String city, String state, String country, String phoneNumber, String zipCode) {
+		super();
+		this.addressLine = addressLine;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+		this.phoneNumber = phoneNumber;
+		this.zipCode = zipCode;
+	}
 	public String getAddressLine() {
 		return addressLine;
 	}
