@@ -18,7 +18,7 @@
 			<table>
 				<tr>
 					<td>Name:</td>
-					<td><input name="name"></td>
+					<td><input id="name"></td>
 				</tr>
 				<tr>
 					<td>Address:</td>

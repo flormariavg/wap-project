@@ -51,10 +51,6 @@ public class Cart extends HttpServlet {
 		}else
 			System.out.println("Error****************");
 			
-		
-		
-		
-		
 	}
 
 	/**
