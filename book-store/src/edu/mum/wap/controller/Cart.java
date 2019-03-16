@@ -41,6 +41,7 @@ public class Cart extends HttpServlet {
 		
 		if(session.getAttribute("shoppingCart")!=null) {
 			System.out.println("Cart********************************");
+			System.out.println("Cart********************************");
 			System.out.println("shoppingCart"+shoppingCart);
 			shoppingCart.calculatedTotalPrice();
 			shoppingCart.calculateShipping();
