@@ -25,7 +25,7 @@ public class TestData {
 		Item item10= new Item("B0010", "The Tuscan Child", 11.99, 1, true);
 		
 		List<Item> booksInventory = new ArrayList<Item>();
-		System.out.println("Saving items...");
+		System.out.println("Saving items inventory...");
 		da.saveNewItem(item1);
 		da.saveNewItem(item2);
 		da.saveNewItem(item3);
@@ -38,23 +38,24 @@ public class TestData {
 		da.saveNewItem(item10);
 		booksInventory = da.readItemList();
 		System.out.println(booksInventory);
+		System.out.println("Inventory saved sucessfully");
 		
 		//Books I want to buy
+		System.out.println("Populating selected books-products...");
 		Product p1 = new Product(item1,3);
 		Product p2 = new Product(item4,1);
 		Product p3 = new Product(item6,1);
 		
 		//my Shopping cart
+		System.out.println("Saving a shopping cart...");
 		ShoppingCart sc1 = new ShoppingCart();
 		sc1.addProducts(p1);
 		sc1.addProducts(p2);
 		sc1.addProducts(p3);
 		
-		System.out.println("Saving the Shopping Cart...");
 		da.saveNewShopList(sc1);
-		System.out.println("Reading the Shopping Cart...");
 		ShoppingCart sc2;
 		sc2 = da.readShopList();
-		System.out.println(sc2.toString());
+		System.out.println("Shopping cart saved sucessfully");
 	}
 }
