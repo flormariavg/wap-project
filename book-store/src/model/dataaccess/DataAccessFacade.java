@@ -7,13 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
 
 public class DataAccessFacade implements DataAccess {
 
 	enum StorageType {
-		PRODUCTS, CARTLINES, SHOPPINGCARTS;
+		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS;
 	}
 
 	public static final String OUTPUT_DIR = System.getProperty("user.dir")
@@ -56,6 +57,19 @@ public class DataAccessFacade implements DataAccess {
 		return retVal;
 	}
 
+	public void saveNewItem(Item i) {
+	    List<Item> items = readItemList();
+	    //String ProdId = p.getProduct().getCode();
+	    items.add(i);
+	    saveToStorage(StorageType.ITEMS,items);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Item> readItemList() {
+		//Returns a product list
+		return (List<Item>) readFromStorage(StorageType.ITEMS);
+	}
+	
 	public void saveNewProduct(Product p) {
 	    List<Product> products = readProdsList();
 	    //String ProdId = p.getProduct().getCode();

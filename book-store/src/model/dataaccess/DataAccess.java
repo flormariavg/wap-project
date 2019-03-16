@@ -2,6 +2,7 @@ package model.dataaccess;
 
 import java.util.List;
 
+import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
 
@@ -12,4 +13,6 @@ public interface DataAccess {
 	public List<Product> readProdsList();
 //	public List<CartLiSOne> readCartLines();
 	public ShoppingCart readShopList();
+	public void saveNewItem(Item i);
+	public List<Item> readItemList();
 }
