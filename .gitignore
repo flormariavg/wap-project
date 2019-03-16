@@ -1,1 +1,7 @@
+/build/
+/target/
+/.classpath
+/RemoteSystemsTempFiles/
+/Servers/
 /.metadata/
+.recommenders/
