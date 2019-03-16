@@ -6,28 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import edu.mum.wap.model.login.User;
+
 public class ShoppingCart implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	private String user;
-
+	private User user;
 	List<Product> products;
 	
 	public ShoppingCart() {
 		// TODO Auto-generated constructor stub
 		products= new  ArrayList<>();
-	}
-
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
 	}
 
 	public List<Product> getProducts() {
@@ -42,9 +32,12 @@ public class ShoppingCart implements Serializable{
 		return products.stream().mapToDouble(y-> y.getItem().getUnitPrice() * y.getQuantity()).sum();
 
 	}
-	public int totalItems() {
-		return products.stream().mapToInt(y-> y.getQuantity() + y.getQuantity()).sum();
+	public User getUser() {
+		return user;
+	}
 
+	public void setUser(User user) {
+		this.user = user;
 	}
 	public double calculateShipping() {
 		Random r = new Random();
@@ -52,7 +45,10 @@ public class ShoppingCart implements Serializable{
 		double shipping=1000 * r.nextDouble();
 		return  Double.parseDouble(formatter.format(shipping));
 	}
-	
+		public int totalItems() {
+		return products.stream().mapToInt(y-> y.getQuantity() + y.getQuantity()).sum();
+
+	}
 	public static List<Item> setProducts() {
 		Item item= new Item("book1", "Sciense Fiction", 10, 2, true);
 		Item item2= new Item("book2", "Technology", 10, 2, true);

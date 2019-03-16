@@ -2,7 +2,6 @@ package edu.mum.wap.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.UUID;
 
 public class Item implements Serializable{
 
@@ -17,6 +16,10 @@ public class Item implements Serializable{
 	private double unitPrice;
 	private int quantity;
 	private boolean inStock;
+	private Person author;
+	private Category category;
+	private String dateRelease;
+	private String quantitySold;
 
 	public Item() {
 		this.code = name+"+"+hashCode();
@@ -88,6 +91,38 @@ public class Item implements Serializable{
 		this.image = image;
 	}
 
+	public Person getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Person author) {
+		this.author = author;
+	}
+
+	public String getDateRelease() {
+		return dateRelease;
+	}
+
+	public void setDateRelease(String dateRelease) {
+		this.dateRelease = dateRelease;
+	}
+
+	public String getQuantitySold() {
+		return quantitySold;
+	}
+
+	public void setQuantitySold(String quantitySold) {
+		this.quantitySold = quantitySold;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
@@ -109,8 +144,4 @@ public class Item implements Serializable{
 				+ ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", inStock=" + inStock + "]";
 	}
 
-	
-
-
-	
 }

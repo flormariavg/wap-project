@@ -2,3 +2,8 @@
 /target/
 /.classpath
 /bin/
+/RemoteSystemsTempFiles/
+/Servers/
+/.metadata/
+.recommenders/
+/bin/
