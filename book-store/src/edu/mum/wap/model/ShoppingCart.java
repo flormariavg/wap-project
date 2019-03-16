@@ -6,28 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import edu.mum.wap.model.login.User;
+
 public class ShoppingCart implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	private String user;
-
+	private User user;
 	List<Product> products;
 	
 	public ShoppingCart() {
 		// TODO Auto-generated constructor stub
 		products= new  ArrayList<>();
-	}
-
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
 	}
 
 	public List<Product> getProducts() {
@@ -42,6 +32,14 @@ public class ShoppingCart implements Serializable{
 		return products.stream().mapToDouble(y-> y.getItem().getUnitPrice() * y.getQuantity()).sum();
 
 	}
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public double calculateShipping() {
 		Random r = new Random();
 		DecimalFormat formatter = new DecimalFormat("#0,00");
