@@ -5,6 +5,7 @@ import java.io.ObjectOutputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.mum.wap.model.Item;
@@ -58,7 +59,7 @@ public class DataAccessFacade implements DataAccess {
 	}
 
 	public void saveNewItem(Item i) {
-	    List<Item> items = readItemList();
+	    List<Item> items=readItemList();
 	    //String ProdId = p.getProduct().getCode();
 	    items.add(i);
 	    saveToStorage(StorageType.ITEMS,items);
