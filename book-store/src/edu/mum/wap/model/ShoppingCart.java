@@ -42,6 +42,10 @@ public class ShoppingCart implements Serializable{
 		return products.stream().mapToDouble(y-> y.getItem().getUnitPrice() * y.getQuantity()).sum();
 
 	}
+	public int totalItems() {
+		return products.stream().mapToInt(y-> y.getQuantity() + y.getQuantity()).sum();
+
+	}
 	public double calculateShipping() {
 		Random r = new Random();
 		DecimalFormat formatter = new DecimalFormat("#0,00");
