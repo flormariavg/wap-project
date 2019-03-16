@@ -1,6 +1,7 @@
 package edu.mum.wap.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +14,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.login.User;
+import model.dataaccess.DataAccess;
+import model.dataaccess.DataAccessFacade;
 
 @WebServlet("/checkout")
 public class Checkout extends HttpServlet {
@@ -33,20 +37,51 @@ public class Checkout extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("loggedIn")==null)
+			session.setAttribute("loggedIn", false);
+		
+		if(session.getAttribute("loggedIn").equals(true)) {
+			ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
+			if (session.getAttribute("shoppingCart") != null) {
+				System.out.println("Cart********************************");
+				System.out.println("shoppingCart" + shoppingCart);
 
-		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
-		if (session.getAttribute("shoppingCart") != null) {
-			System.out.println("Cart********************************");
-			System.out.println("shoppingCart" + shoppingCart);
+				User user = (User) session.getAttribute("user");
+				System.out.println("username"+user.getUsername());
+				shoppingCart.setUser(user);
+				
+				shoppingCart.calculatedTotalPrice();
+				shoppingCart.calculateShipping();
 
-			shoppingCart.calculatedTotalPrice();
-			shoppingCart.calculateShipping();
+				System.out.println("shoppingCart"+shoppingCart);
+				
+				
+				DataAccess da = new DataAccessFacade();
+				da.saveNewShopList(shoppingCart);
+				
+				ShoppingCart shoppingCart2 = da.readShopList();
+				
+				System.out.println("****************");
+				System.out.println("shoppingCart 2: "+shoppingCart2);
+				
+//				private User user;
+//				List<Product> products;
+//				private int totalItems = 0;
+//				private Double totalPrice = 0.0;
+//				private Double shipping;
+//				
+				request.getRequestDispatcher("checkout.jsp").forward(request, response);
+			} else {
+				System.out.println("Error****************");
 
-			request.getRequestDispatcher("checkout.jsp").forward(request, response);
-		} else {
-			System.out.println("Error****************");
-
-		}
+			}
+			
+		}else
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+		
+		
+		
 
 	}
 

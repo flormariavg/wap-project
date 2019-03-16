@@ -90,8 +90,11 @@ public class ShoppingCart implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ShoppingCart [user=" + user + ", products=" + products + "]";
+		return "ShoppingCart [user=" + user + ", products=" + products + ", totalItems=" + totalItems + ", totalPrice="
+				+ totalPrice + ", shipping=" + shipping + "]";
 	}
+
+	
 
 	
 }

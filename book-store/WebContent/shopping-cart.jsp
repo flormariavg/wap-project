@@ -14,7 +14,7 @@
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
 			<ul>
-				<li><a href="index.html" class="current">Login</a></li>
+				<li><a href="login.jsp" class="current">Login</a></li>
 				<li><a href="subpage.html">Home</a></li>
 				<li><a href="subpage.html">Search</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
