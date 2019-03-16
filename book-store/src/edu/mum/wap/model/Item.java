@@ -1,6 +1,7 @@
 package edu.mum.wap.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Item implements Serializable{
@@ -18,22 +19,28 @@ public class Item implements Serializable{
 	private boolean inStock;
 	private Person author;
 	private Category category;
-	private String dateRelease;
-	private String quantitySold;
+	private LocalDate release;
+	private int quantitySold;
 
 	public Item() {
 		this.code = name+"+"+hashCode();
 	}
 
-	public Item(String name,  String description, double unitPrice, int quantity, boolean inStock) {
+	public Item(String image, String name, String description, double unitPrice, int quantity,
+			boolean inStock, Person author, Category category, LocalDate release, int quantitySold) {
+		super();
+		this.image = image;
 		this.name = name;
 		this.description = description;
 		this.unitPrice = unitPrice;
 		this.quantity = quantity;
 		this.inStock = inStock;
+		this.author = author;
+		this.category = category;
+		this.release = release;
+		this.quantitySold = quantitySold;
 		setCode(name);
 	}
-
 
 	public String getCode() {
 		return code;
@@ -99,24 +106,24 @@ public class Item implements Serializable{
 		this.author = author;
 	}
 
-	public String getDateRelease() {
-		return dateRelease;
-	}
-
-	public void setDateRelease(String dateRelease) {
-		this.dateRelease = dateRelease;
-	}
-
-	public String getQuantitySold() {
+	public int getQuantitySold() {
 		return quantitySold;
 	}
 
-	public void setQuantitySold(String quantitySold) {
+	public void setQuantitySold(int quantitySold) {
 		this.quantitySold = quantitySold;
 	}
 
 	public Category getCategory() {
 		return category;
+	}
+
+	public LocalDate getRelease() {
+		return release;
+	}
+
+	public void setRelease(LocalDate release) {
+		this.release = release;
 	}
 
 	public void setCategory(Category category) {

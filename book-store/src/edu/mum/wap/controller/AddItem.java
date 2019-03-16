@@ -1,7 +1,6 @@
 package edu.mum.wap.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,15 +36,14 @@ public class AddItem extends HttpServlet {
 		System.out.println(request.getParameter("item"));
 		
 		Item item= new Item();
-		List<Item> products = Product.setItems();
+	/*	List<Item> products = Product.setItems();
 		for (Item item2 : products) {
 			if(item2.getCode().equals(request.getParameter("item"))) {
 				item= item2;
 				break;
 			}
 			
-		}
-		
+		}*/
 		
 		Product product= new Product();
 		product.setItem(item);

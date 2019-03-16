@@ -5,6 +5,7 @@ import java.io.ObjectOutputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.mum.wap.model.Item;
@@ -17,8 +18,7 @@ public class DataAccessFacade implements DataAccess {
 		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS;
 	}
 
-	public static final String OUTPUT_DIR = System.getProperty("user.dir")
-			+ "\\src\\model\\dataaccess\\storage";
+	public static final String OUTPUT_DIR = "c:\\temp\\dataaccess\\storage";
 	public static final String DATE_PATTERN = "MM/dd/yyyy";
 
 	static void saveToStorage(StorageType type, Object ob) {
@@ -58,6 +58,8 @@ public class DataAccessFacade implements DataAccess {
 	}
 
 	public void saveNewItem(Item i) {
+		//Descomentar esta lina para q sirva
+//		List<Item> items = new ArrayList<>();
 	    List<Item> items = readItemList();
 	    //String ProdId = p.getProduct().getCode();
 	    items.add(i);

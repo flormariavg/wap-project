@@ -41,7 +41,7 @@ public class Product implements Serializable {
 	
 	
 	
-	public static List<Item> setItems() {
+	/*public static List<Item> setItems() {
 		Item item= new Item("book1", "Sciense Fiction", 10, 2, true);
 		Item item2= new Item("book2", "Technology", 10, 2, true);
 		Item item3= new Item("book3", "Stories", 10, 2, true);
@@ -65,5 +65,5 @@ public class Product implements Serializable {
 			
 		}
 		
-	}
+	}*/
 }

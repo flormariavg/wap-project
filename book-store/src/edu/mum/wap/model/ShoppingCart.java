@@ -47,7 +47,7 @@ public class ShoppingCart implements Serializable{
 		return  Double.parseDouble(formatter.format(shipping));
 	}
 	
-	public static List<Item> setProducts() {
+/*	public static List<Item> setProducts() {
 		Item item= new Item("book1", "Sciense Fiction", 10, 2, true);
 		Item item2= new Item("book2", "Technology", 10, 2, true);
 		Item item3= new Item("book3", "Stories", 10, 2, true);
@@ -62,7 +62,7 @@ public class ShoppingCart implements Serializable{
 		products.add(item4);
 		
 		return products;
-	}
+	}*/
 
 	public void checkout(){
 	}
