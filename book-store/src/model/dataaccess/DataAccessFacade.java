@@ -72,6 +72,18 @@ public class DataAccessFacade implements DataAccess {
 		return (List<Item>) readFromStorage(StorageType.ITEMS);
 	}
 	
+	public Item findItemByCode(String code) {
+		//Returns a product list
+		List<Item> items =
+				(List<Item>) readFromStorage(StorageType.ITEMS);
+		for(Item item: items) {
+			if(item.getCode().equals(code)) {
+				return item;
+			}
+		}
+		return null;
+	}
+	
 	public void saveNewProduct(Product p) {
 	    List<Product> products = readProdsList();
 	    //String ProdId = p.getProduct().getCode();

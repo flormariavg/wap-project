@@ -49,17 +49,17 @@
 				<!-- end of content left -->
 
 				<table>
-					<c:forEach items="0gCart.products}" var="product">
+					<c:forEach items="${shoppingCart.products}" var="product">
 						<div class="templatemo_product_box">
 
 							<h1>
 								<%-- ${item.name} <span>${item.author}</span> --%>
 								${product.item.name}
 							</h1>
-							<img src=${product.item.image } alt="image" />
+							<img src="${product.item.image}" alt="image" />
 							<div class="product_info">
-								<h3>${item.unitPrice}</h3>
-								<h3>${item.quantity}</h3>
+								<h3>${product.item.unitPrice}</h3>
+								<h3>${product.quantity}</h3>
 								<div class="buy_now_button">
 									<button onclick="">Delete</button>
 								</div>
