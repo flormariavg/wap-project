@@ -70,6 +70,7 @@ img {
 	color: #FFFFFF;
 	font-weight: bold;
 	text-decoration: none;
+	border: gray solid 1px;
 }
 
 .detail_button a {
@@ -361,6 +362,7 @@ div.buy_now_button_shopping_cart a {
 	color: #FFFFFF;
 	font-weight: bold;
 	text-decoration: none;
+	border: grey solid 1px;
 }
 
 div.store a {
@@ -418,4 +420,31 @@ div.store a.store {
 	position:fixed; 
 	top:50%; 
 	right:50%;
+}
+
+<!-- Shopping Cart -->
+#templatemo_content #templatemo_content_left_ShoppingCart {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	background-color: #171716;
+	border: 1px solid #212120;
+}
+
+#templatemo_content #templatemo_content_right_ShoppingCart {
+	float: right;
+	width: 50%;
+}
+.border-bottom {
+	border-bottom: 3px solid gray;
+	width: 80%;
+}
+.border-bottom.left {
+	border-bottom: 3px solid gray;
+	width: 40%;
+}
+.button-checkout {
+	float: center;
+	width: 80%;
+	font-stretch: wider;
 }
