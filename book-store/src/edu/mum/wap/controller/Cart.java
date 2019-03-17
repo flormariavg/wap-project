@@ -49,7 +49,7 @@ public class Cart extends HttpServlet {
 			System.out.println("Error****************");
 		
 		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
-			
+//		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 	}
 
 	/**
