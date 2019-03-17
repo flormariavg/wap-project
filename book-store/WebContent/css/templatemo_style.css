@@ -438,13 +438,20 @@ div.store a.store {
 .border-bottom {
 	border-bottom: 3px solid gray;
 	width: 80%;
+	font-size: 15px;
+	margin-bottom: 15px;
 }
 .border-bottom.left {
 	border-bottom: 3px solid gray;
 	width: 40%;
+	font-size: 15px;
+	margin-bottom: 15px;
 }
 .button-checkout {
 	float: center;
 	width: 80%;
 	font-stretch: wider;
+}
+table.table_ckeckout{
+    border-spacing: 10px;    
 }

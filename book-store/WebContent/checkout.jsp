@@ -6,7 +6,8 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -48,121 +49,125 @@
 		<div id="templatemo_content">
 
 			<div id="templatemo_content_right_ShoppingCart">
-
-				<div id="div2">
-			<p class="border-bottom">
-				<strong>Order confirmation</strong>
-			</p>
-			<table>
-				<tr>
-					<td>Products:</td>
-					<td><label class="label-checkout" name="totalproducts">${shoppingCart.totalPrice}</label></td>
-				</tr>
-				<tr>
-					<td>Shipping:</td>
-					<td><label class="label-checkout" name="shipping">${shoppingCart.shipping}</label></td>
-				</tr>
-			</table>
-
-
-			<p class="border-bottom">
-				<strong>Total of the order</strong>
-			</p>
-						<table>
-				<tr>
-					<td>Total:</td>
-					<td><label class="label-checkout" name="totalall">${shoppingCart.total}</label></td>
-				</tr>
-			</table>
-		</div>
-	
-			    <img id="loader" style="display:none;" alt="loader img" src="images/loader.gif"/>
-				<button id="btn_proceed_checkout" type="button" class="button-checkout">Proceed</button>
 				<br>
-			
+				<div id="div2">
+					<p class="border-bottom">
+						<strong>Order confirmation</strong>
+					</p>
+					<table>
+						<tr>
+							<td>Products:</td>
+							<td><label class="label-checkout" name="totalproducts">${shoppingCart.totalPrice}</label></td>
+						</tr>
+						<tr>
+							<td>Shipping:</td>
+							<td><label class="label-checkout" name="shipping">${shoppingCart.shipping}</label></td>
+						</tr>
+					</table>
+
+
+					<p class="border-bottom">
+						<strong>Total of the order</strong>
+					</p>
+					<table>
+						<tr>
+							<td>Total:</td>
+							<td><label class="label-checkout" name="totalall">${shoppingCart.total}</label></td>
+						</tr>
+					</table>
+				</div>
+
+				<img id="loader" style="display: none;" alt="loader img"
+					src="images/loader.gif" />
+				<button id="btn_proceed_checkout" type="button"
+					class="button-checkout">Proceed</button>
+				<br>
+
 
 
 			</div>
 			<!-- end of content left -->
 
 
-		
+
 			<div id="templatemo_content_left_ShoppingCart">
+				<br>
 				<div id="div1">
-			<p class="border-bottom left">
-				<strong>1. Shipping Address</strong>
-			</p>
-			<table>
-				<tr>
-					<td>Name:</td>
-					<td><input id="name"></td>
-				</tr>
-				<tr>
-					<td>Address:</td>
-					<td><input name="address"></td>
-				</tr>
-				<tr>
-					<td>City:</td>
-					<td><input name="city"></td>
-				</tr>
-				<tr>
-					<td>State:</td>
-					<td><input name="state"></td>
-				</tr>
-				<tr>
-					<td>ZipCode:</td>
-					<td><input name="zipcode"></td>
-				</tr>
-			</table>
-
-			<p class="border-bottom left">
-				<strong>2. Payment Method</strong>
-			</p>
-			<table>
-				<tr>
-					<label><input type="radio" name="payment" value="credit">
-						CreditCard</label>
+					<p class="border-bottom left">
+						<strong>1. Shipping Address</strong>
+					</p>
+					<table class="table_ckeckout">
+						<tr>
+							<td>Name:</td>
+							<td><input id="name"></td>
+						</tr>
+						<tr>
+							<td>Address:</td>
+							<td><input name="address"></td>
+						</tr>
+						<tr>
+							<td>City:</td>
+							<td><input name="city"></td>
+						</tr>
+						<tr>
+							<td>State:</td>
+							<td><input name="state"></td>
+						</tr>
+						<tr>
+							<td>ZipCode:</td>
+							<td><input name="zipcode"></td>
+						</tr>
+					</table>
 					<br>
-				</tr>
-				<tr>
-					<label><input type="radio" name="payment" value="debit">
-						DebitCard</label>
+					<p class="border-bottom left">
+						<strong>2. Payment Method</strong>
+					</p>
+					<table class="table_ckeckout">
+						<tr>
+							<label><input type="radio" name="payment" value="credit">
+								CreditCard</label>
+							<br>
+						</tr>
+						<tr>
+							<label><input type="radio" name="payment" value="debit">
+								DebitCard</label>
+							<br>
+						</tr>
+						<tr>
+							<label><input type="radio" name="payment" value="other">
+								Other</label>
+						</tr>
+					</table>
 					<br>
-				</tr>
-				<tr>
-					<label><input type="radio" name="payment" value="other">
-						Other</label>
-				</tr>
-			</table>
-			<p class="border-bottom left">
-				<strong>3. Billing Address</strong>
-			</p>
-			<table>
-				<tr>
-					<td>Name:</td>
-					<td><input name="namebill"></td>
-				</tr>
-				<tr>
-					<td>Address:</td>
-					<td><input name="addressbill"></td>
-				</tr>
-				<tr>
-					<td>City:</td>
-					<td><input name="citybill"></td>
-				</tr>
-				<tr>
-					<td>State:</td>
-					<td><input name="statebill"></td>
-				</tr>
-				<tr>
-					<td>ZipCode:</td>
-					<td><input name="zipcodebill"></td>
-				</tr>
-			</table>
-		</div>
-				
+					<p class="border-bottom left">
+						<strong>3. Billing Address</strong>
+					</p>
+					<table class="table_ckeckout">
+						<tr>
+							<td>Name:</td>
+							<td><input name="namebill"></td>
+						</tr>
+						<tr>
+							<td>Address:</td>
+							<td><input name="addressbill"></td>
+						</tr>
+						<tr>
+							<td>City:</td>
+							<td><input name="citybill"></td>
+						</tr>
+						<tr>
+							<td>State:</td>
+							<td><input name="statebill"></td>
+						</tr>
+						<tr>
+							<td>ZipCode:</td>
+							<td><input name="zipcodebill"></td>
+						</tr>
+					</table>
+				</div>
 
-								<div class="cleaner_with_height">&nbsp;</div>
+
+				<div class="cleaner_with_height">&nbsp;</div>
 
 			</div>
 			<!-- end of content right -->
