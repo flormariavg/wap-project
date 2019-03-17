@@ -12,6 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<div id="result" class="result">
+		<label id="msg"></label>
+	</div>
 	<!--  Free CSS Templates from www.templatemo.com -->
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
@@ -94,7 +98,6 @@
 							<p>${item.description}</p>
 							<h3>${item.unitPrice}</h3>
 							<div class="buy_now_button">
-								<img id="loader" style="display:none;" alt="loader img" src="images/loader.gif"/>
 								<a onclick="addToCart('${item.code}')">Add Cart</a>
 							</div>
 

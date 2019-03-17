@@ -399,4 +399,19 @@ div.store a.store {
 	justify-content: center;
 }
 
-
+.result{
+	position:fixed; 
+	top:2%; 
+	right:2%;
+	padding: 10px;
+    font-family: Arial;
+    background: #fffea1;
+    border: 1px solid #fc0;
+    color: black;
+}
+.loader{
+	display:none;
+	position:fixed; 
+	top:50%; 
+	right:50%;
+}
