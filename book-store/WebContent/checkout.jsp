@@ -113,7 +113,7 @@
 			</table>
 		</div>
 		<div id="div3">
-			
+			    <img id="loader" style="display:none;" alt="loader img" src="images/loader.gif"/>
 				<button id="btn_proceed_checkout" type="button" class="button-checkout">Proceed</button>
 				<br>
 			

@@ -1,3 +1,34 @@
+(function (lib) {
+	var $= lib;
+    $(function () {
+		$("#loader").hide();
+		
+        $("#btn_proceed_checkout.button-checkout").click(function () {
+			
+            $.get("delay.php")
+                .done(display)
+                .fail(ajaxFailure)
+                .always(setTimeout(waitnHide,5000));
+
+            $("#loader").show();
+        });
+    });
+
+    function waitnHide(){
+    	$("#loader").hide();
+    }
+    
+    function display(data) {
+    	//$("#loader").show();
+    	//setTimeout($("#loader").hide,5000)
+		alert("Thanks for purchasing in our BookStore!");
+    }
+
+    function ajaxFailure() {
+        console.log("ajax failure.");
+    }
+})(jQuery);
+
 $(function(){
 	$('#btn_proceed_checkout').click(proceedCheckout);
 	
@@ -13,5 +44,4 @@ $(function(){
 		//data = JSON.parse(data);
 		alert('Proceeed');
 	}
-})
-
+});

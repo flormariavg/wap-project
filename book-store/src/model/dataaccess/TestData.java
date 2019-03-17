@@ -8,6 +8,8 @@ import edu.mum.wap.model.Address;
 import edu.mum.wap.model.Category;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Person;
+import edu.mum.wap.model.Product;
+import edu.mum.wap.model.ShoppingCart;
 
 public class TestData {
 
@@ -44,7 +46,7 @@ public class TestData {
 		System.out.println(booksInventory);
 		
 		//Books I want to buy
-	/*	Product p1 = new Product(item1,3);
+		Product p1 = new Product(item1,3);
 		Product p2 = new Product(item4,1);
 		Product p3 = new Product(item6,1);
 		
@@ -60,6 +62,6 @@ public class TestData {
 		ShoppingCart sc2;
 		sc2 = da.readShopList();
 		System.out.println(sc2.toString());
-		*/
+		
 	}
 }

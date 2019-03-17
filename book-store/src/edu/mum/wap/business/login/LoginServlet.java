@@ -13,7 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import edu.mum.wap.data.DataBase;
-import edu.mum.wap.model.login.User;;
+import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.login.User;
+import model.dataaccess.DataAccess;
+import model.dataaccess.DataAccessFacade;;
 
 /**
  * Servlet implementation class LoginServlet
@@ -77,6 +80,18 @@ public class LoginServlet extends HttpServlet {
 					cookie.setMaxAge(month);
 					response.addCookie(cookie);
 				}
+				
+//				String 
+//				if(shoppingCart==null) {
+//					
+//				}
+				
+				DataAccess da = new DataAccessFacade();
+				
+				ShoppingCart shoppingCart = da.readShopList();
+				session.setAttribute("shoppingCart", shoppingCart);
+				
+				System.out.println("****************");
 				
 				response.sendRedirect("store");
 				

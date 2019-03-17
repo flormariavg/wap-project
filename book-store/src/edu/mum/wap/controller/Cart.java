@@ -37,19 +37,18 @@ public class Cart extends HttpServlet {
 		
 		HttpSession session= request.getSession();
 		
-		
 		ShoppingCart shoppingCart= (ShoppingCart) session.getAttribute("shoppingCart");
+		
 		if(session.getAttribute("shoppingCart")!=null) {
 			System.out.println("Cart********************************");
 			System.out.println("shoppingCart"+shoppingCart);
 			shoppingCart.calculatedTotalPrice();
 			shoppingCart.calculateShipping();
 			request.setAttribute("shoppingCart", shoppingCart);
-			
-			
-			request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 		}else
 			System.out.println("Error****************");
+		
+		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 //		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 	}
 
