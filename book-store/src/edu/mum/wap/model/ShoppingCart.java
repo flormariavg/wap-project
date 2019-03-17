@@ -84,7 +84,7 @@ public class ShoppingCart implements Serializable {
 	}
 
 	public String format(Double value) {
-		DecimalFormat formatter = new DecimalFormat("#0,00");
+		DecimalFormat formatter = new DecimalFormat("#0.00");
 		return formatter.format(value);
 	}
 
