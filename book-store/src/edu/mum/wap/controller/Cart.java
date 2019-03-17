@@ -47,10 +47,11 @@ public class Cart extends HttpServlet {
 			request.setAttribute("shoppingCart", shoppingCart);
 			request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 		}else
-			System.out.println("Error****************");
-		
-		
-//		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
+		{
+			System.out.println("No Shopping cart, creating empty");
+			request.setAttribute("shoppingCart", new ShoppingCart());
+			request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
+		}
 	}
 
 	/**

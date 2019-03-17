@@ -126,3 +126,4 @@ public class DataAccessFacade implements DataAccess {
 		return (ShoppingCart) readFromStorage(StorageType.SHOPPINGCARTS);
 	}
 }
+
