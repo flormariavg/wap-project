@@ -79,7 +79,7 @@
 			<!-- end of content left -->
 
 
-			<div><a href="<c:url value="/cart"></c:url>">Cart</a></div>
+			<div class="store"><a class="store" href="<c:url value="/cart"></c:url>">Cart</a></div>
 			<div id="templatemo_content_right">
 				<c:forEach items="${products}" var="item">
 					<div class="templatemo_product_box">

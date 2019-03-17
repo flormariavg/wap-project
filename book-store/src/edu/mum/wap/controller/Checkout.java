@@ -47,7 +47,7 @@ public class Checkout extends HttpServlet {
 			System.out.println("Error****************");
 
 		}
-
+		//		request.getRequestDispatcher("checkout.jsp").forward(request, response);
 	}
 
 	/**
