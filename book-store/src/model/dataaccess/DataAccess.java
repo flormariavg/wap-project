@@ -16,4 +16,5 @@ public interface DataAccess {
 	public void saveNewItem(Item i);
 	public List<Item> readItemList();
 	public Item findItemByCode(String code);
+	public void resetInventory();
 }

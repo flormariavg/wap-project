@@ -57,6 +57,12 @@ public class DataAccessFacade implements DataAccess {
 		return retVal;
 	}
 
+	public void resetInventory() {
+		//Used to reset the Items file (Inventory)
+		List<Item> items = new ArrayList<>();
+	    saveToStorage(StorageType.ITEMS,items);
+	}
+
 	public void saveNewItem(Item i) {
 		//Descomentar esta lina para q sirva
 //		List<Item> items = new ArrayList<>();

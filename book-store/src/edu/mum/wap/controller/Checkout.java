@@ -81,7 +81,7 @@ public class Checkout extends HttpServlet {
 		
 		
 		
-
+		//		request.getRequestDispatcher("checkout.jsp").forward(request, response);
 	}
 
 	/**

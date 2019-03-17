@@ -45,11 +45,16 @@
 		</div>
 		<!-- end of header -->
 
-		<div id="templatemo_content">
+		<div id="templatemo_content" class="shopping_cart">
+			<c:if test="${shoppingCart.totalItems!=0}">
+				<div id="templatemo_content_left" class="shopping_cart">
+					<!-- end of content left -->
 
-			<div id="templatemo_content_left" class="shopping_cart">
-				<!-- end of content left -->
+					<table>
+						<c:forEach items="${shoppingCart.products}" var="product">
+							<div class="templatemo_product_box">
 
+<<<<<<< HEAD
 				<table>
 					<c:forEach items="${shoppingCart.products}" var="product">
 						<div class="templatemo_product_box">
@@ -64,26 +69,37 @@
 								<h3>${product.quantity}</h3>
 								<div class="buy_now_button">
 									<button onclick="deleteFromCart('${product.item.code}')">Delete</button>
+=======
+								<h1>
+									<%-- ${item.name} <span>${item.author}</span> --%>
+									${product.item.name}
+								</h1>
+								<img src="${product.item.image}" alt="image" />
+								<div class="product_info">
+									<h3>${product.item.unitPrice}</h3>
+									<h3>${product.quantity}</h3>
+									<div class="buy_now_button">
+										<button onclick="">Delete</button>
+									</div>
+>>>>>>> branch 'master' of https://github.com/flormariavg/wap-project.git
 								</div>
-							</div>
-				</table>
-				<div class="cleaner">&nbsp;</div>
-			</div>
+					</table>
+					<div class="cleaner">&nbsp;</div>
+				</div>
 
-			<div class="cleaner_with_width">&nbsp;</div>
-			<div class="cleaner_with_height">&nbsp;</div>
-			</c:forEach>
-
+				<div class="cleaner_with_width">&nbsp;</div>
+				<div class="cleaner_with_height">&nbsp;</div>
+				</c:forEach>
+			</c:if>
 			<div id="templatemo_content_left" class="shopping_cart">
 				<h1>Subtotal</h1>
 				<h3>Total Items: ${shoppingCart.totalItems}</h3>
 				<h3>Books Price: ${shoppingCart.totalPrice}</h3>
-				<div class="buy_now_button">
+				<div class="buy_now_button_shopping_cart">
 					<a href="<c:url value="/checkout"></c:url>">Proceed to checkout</a>
-<!-- 					<button onclick="">Proceed to checkout</button> -->
+					<!-- 					<button onclick="">Proceed to checkout</button> -->
 				</div>
 			</div>
-
 		</div>
 
 		<!-- end of content right -->
