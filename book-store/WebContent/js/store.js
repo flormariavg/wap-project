@@ -21,10 +21,8 @@ function addToCart(itemId) {
 		},
 		error : function() {
 			alert("There was an error");
-			
 		}
 	});
-
 }
 
 function deleteFromCart(itemId) {
