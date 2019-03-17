@@ -398,6 +398,9 @@ div.store a.store {
 	height: 320px;
 	justify-content: center;
 }
+#center_login form{
+	max-width: 200px;
+}
 
 .result{
 	position:fixed; 
