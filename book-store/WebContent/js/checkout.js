@@ -4,7 +4,6 @@
 		$("#loader").hide();
 		
         $("#btn_proceed_checkout.button-checkout").click(function () {
-			
             $.get("delay.php")
                 .done(display)
                 .fail(ajaxFailure)
@@ -14,6 +13,10 @@
         });
     });
 
+    function waitnHide(){
+    	$("#loader").hide();
+    }
+    
     function display(data) {
     	//To do the call to Transaction.commitTransaction
 		alert("Thanks for purchasing in our BookStore!");
