@@ -6,6 +6,8 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -61,7 +63,7 @@
 								<h3>${product.item.unitPrice}</h3>
 								<h3>${product.quantity}</h3>
 								<div class="buy_now_button">
-									<button onclick="">Delete</button>
+									<button onclick="deleteFromCart('${product.item.code}')">Delete</button>
 								</div>
 							</div>
 				</table>

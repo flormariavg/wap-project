@@ -6,6 +6,8 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -92,9 +94,7 @@
 							<p>${item.description}</p>
 							<h3>${item.unitPrice}</h3>
 							<div class="buy_now_button">
-								<a
-									href="<c:url value="/addItem"><c:param name="item" value="${item.code}" /></c:url>">Add
-									Cart</a>
+								<a onclick="addToCart('${item.code}')">Add Cart</a>
 							</div>
 
 						</div>
