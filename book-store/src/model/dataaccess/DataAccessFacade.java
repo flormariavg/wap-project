@@ -18,7 +18,7 @@ public class DataAccessFacade implements DataAccess {
 		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS;
 	}
 
-	public static final String OUTPUT_DIR = "c:\\temp\\dataaccess\\storage";
+	public static final String OUTPUT_DIR = "/tmp";
 	public static final String DATE_PATTERN = "MM/dd/yyyy";
 
 	static void saveToStorage(StorageType type, Object ob) {

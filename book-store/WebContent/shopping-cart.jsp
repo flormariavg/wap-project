@@ -12,6 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<div id="result" class="result">
+		<label id="msg"></label>
+	</div>
 	<!--  Free CSS Templates from www.templatemo.com -->
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
@@ -50,7 +54,7 @@
 				<div id="templatemo_content_left" class="shopping_cart">
 					<!-- end of content left -->
 
-					<table>
+					
 						<c:forEach items="${shoppingCart.products}" var="product">
 							<div class="templatemo_product_box">
 
@@ -66,7 +70,6 @@
 										<button button onclick="deleteFromCart('${product.item.code}')">Delete</button>
 									</div>
 								</div>
-					</table>
 					<div class="cleaner">&nbsp;</div>
 				</div>
 
