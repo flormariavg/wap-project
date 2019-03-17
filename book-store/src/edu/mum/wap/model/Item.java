@@ -47,7 +47,7 @@ public class Item implements Serializable{
 	}
 
 	public void setCode(String code) {
-		this.code = name+"+"+hashCode();
+		this.code = name+"_"+hashCode();
 	}
 
 	public String getName() {

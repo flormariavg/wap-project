@@ -18,53 +18,59 @@ import model.dataaccess.DataAccessFacade;
 /**
  * Servlet implementation class AddItem
  */
-@WebServlet("/addItem")
+@WebServlet("/itemManager")
 public class AddItem extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddItem() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String code = request.getParameter("item");
-		DataAccess da = new DataAccessFacade();
-		Item item = da.findItemByCode(code);
-		Product product= new Product();
-		product.setItem(item);
-		product.setQuantity(1);
-		
-		HttpSession session= request.getSession();
-		
-		ShoppingCart shoppingCart= (ShoppingCart) session.getAttribute("shoppingCart");
-		if(session.getAttribute("shoppingCart")==null)
-			shoppingCart= new ShoppingCart();
-		
-		shoppingCart.addProducts(product);
-		
-		System.out.println("shoppingCart"+shoppingCart);
-		
-		session.setAttribute("shoppingCart", shoppingCart);
-		
-		
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		response.sendRedirect("store");
+	public AddItem() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		String action = request.getParameter("action");
+		String code = request.getParameter("item");
+		
+		System.out.println(code);
+		
+		HttpSession session = request.getSession();
+		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
+		
+		if (session.getAttribute("shoppingCart") == null)
+			shoppingCart = new ShoppingCart();
+		
+		DataAccess da = new DataAccessFacade();
+		Item item = da.findItemByCode(code);
+		Product product = new Product();
+		product.setItem(item);
+		product.setQuantity(1);
+		
+		if(action.equals("add")) {
+			shoppingCart.addProducts(product);
+			System.out.println("shoppingCart" + shoppingCart);
+			session.setAttribute("shoppingCart", shoppingCart);
+		}else {
+			shoppingCart.delete(product);
+			session.setAttribute("shoppingCart", shoppingCart);
+		}
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 

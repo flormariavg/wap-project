@@ -14,13 +14,8 @@
         });
     });
 
-    function waitnHide(){
-    	$("#loader").hide();
-    }
-    
     function display(data) {
-    	//$("#loader").show();
-    	//setTimeout($("#loader").hide,5000)
+    	//To do the call to Transaction.commitTransaction
 		alert("Thanks for purchasing in our BookStore!");
     }
 
@@ -29,19 +24,19 @@
     }
 })(jQuery);
 
-$(function(){
-	$('#btn_proceed_checkout').click(proceedCheckout);
-	
-	function proceedCheckout(){
-		var name = $('#name').val();
-		alert(name);
-		//var productPrice = $('#product_price').val();
-		var checkoutInfo = {shipping : {name: name}};
-		$.post('checkout',{product: JSON.stringify(checkoutInfo)}, processData, "json")
-	}
-
-	function processData(data){
-		//data = JSON.parse(data);
-		alert('Proceeed');
-	}
-});
+//$(function(){
+//	$('#btn_proceed_checkout').click(proceedCheckout);
+//	
+//	function proceedCheckout(){
+//		var name = $('#name').val();
+//		alert(name);
+//		//var productPrice = $('#product_price').val();
+//		var checkoutInfo = {shipping : {name: name}};
+//		$.post('checkout',{product: JSON.stringify(checkoutInfo)}, processData, "json")
+//	}
+//
+//	function processData(data){
+//		//data = JSON.parse(data);
+//		alert('Proceeed');
+//	}
+//});

@@ -3,6 +3,7 @@ package edu.mum.wap.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Product implements Serializable {
 	/**
@@ -39,8 +40,16 @@ public class Product implements Serializable {
 		return "Product [quantity=" + quantity + ", item=" + item + "]";
 	}
 	
-	
-	
+	@Override
+	public boolean equals(Object obj) {
+		Product p = (Product) obj;
+		return p.item.getCode().equals(this.item.getCode());
+	}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return Objects.hash(this.item.getCode());
+	}
 	/*public static List<Item> setItems() {
 		Item item= new Item("book1", "Sciense Fiction", 10, 2, true);
 		Item item2= new Item("book2", "Technology", 10, 2, true);

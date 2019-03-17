@@ -6,6 +6,8 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -44,10 +46,9 @@
 		<!-- end of header -->
 
 		<div id="templatemo_content" class="shopping_cart">
-			<c:choose>
-				<c:when test="${shoppingCart.totalItems!=0}">
-					<div id="templatemo_content_left" class="shopping_cart">
-						<!-- end of content left -->
+			<c:if test="${shoppingCart.totalItems!=0}">
+				<div id="templatemo_content_left" class="shopping_cart">
+					<!-- end of content left -->
 
 						<table>
 							<c:forEach items="${shoppingCart.products}" var="product">
