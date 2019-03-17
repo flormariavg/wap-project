@@ -94,6 +94,7 @@
 							<p>${item.description}</p>
 							<h3>${item.unitPrice}</h3>
 							<div class="buy_now_button">
+								<img id="loader" style="display:none;" alt="loader img" src="images/loader.gif"/>
 								<a onclick="addToCart('${item.code}')">Add Cart</a>
 							</div>
 

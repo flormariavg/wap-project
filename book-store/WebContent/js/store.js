@@ -1,13 +1,20 @@
+$(function () {
+	$("#loader").hide();
+});
+
 function addToCart(itemId) {
+	//$("#loader").show();
 	$.ajax({
 		url : `itemManager`,
 		type : 'GET',
 		data : `item=${itemId}&action=add`,
 		success : function(data) {
 			alert("The item was successfully added to your shopping cart");
+			$("#loader").hide();
 		},
 		error : function() {
 			alert("There was an error");
+			$("#loader").hide();
 		}
 	});
 
