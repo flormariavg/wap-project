@@ -23,12 +23,12 @@ public class TestData {
 		Item item2= new Item("images/b2.jpg", "The Girl Who Lived", "The Girl Who Lived", 12.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 5);
 		Item item3= new Item("images/b3.jpg", "Before We Were Yours", "Before We Were Yours", 10.0, 100, true, person, Category.children, LocalDate.of(2013,10, 30), 10);
 		Item item4= new Item("images/b4.jpg", "Spilled Milke", "Spilled Milk", 115.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 4);
-		Item item5= new Item("images/b1.jpg", "The Storyteller's Secret", "The Storyteller's Secret", 45.0, 100, true, person, Category.children, LocalDate.of(2017,10, 3), 3);
-		Item item6= new Item("images/b2.jpg", "All the Light We Cannot See", "All the Light We Cannot Seee", 65.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 2);
-		Item item7= new Item("images/b3.jpg", "The Life We Bury", "The Life We Bury", 25.0, 100, true, person, Category.children, LocalDate.of(2011,10, 30), 1);
-		Item item8= new Item("images/b4.jpg", "The Next Person You Meet in Heaven", "The Next Person You Meet in Heaven", 25.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 4);
-		Item item9= new Item("images/b1.jpg", "Lilac Girl", "Lilac Girl", 115.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 20);
-		Item item10= new Item("images/b2.jpg", "The Tuscan Child", "The Tuscan Child", 57.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 10);
+		Item item5= new Item("images/b5.jpg", "The Storyteller's Secret", "The Storyteller's Secret", 45.0, 100, true, person, Category.children, LocalDate.of(2017,10, 3), 3);
+		Item item6= new Item("images/b6.jpg", "All the Light We Cannot See", "All the Light We Cannot Seee", 65.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 2);
+		Item item7= new Item("images/b7.jpg", "The Life We Bury", "The Life We Bury", 25.0, 100, true, person, Category.children, LocalDate.of(2011,10, 30), 1);
+		Item item8= new Item("images/b8.jpg", "The Next Person You Meet in Heaven", "The Next Person You Meet in Heaven", 25.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 4);
+		Item item9= new Item("images/b9.jpg", "Lilac Girl", "Lilac Girl", 115.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 20);
+		Item item10= new Item("images/b10.jpg", "The Tuscan Child", "The Tuscan Child", 57.0, 100, true, person, Category.children, LocalDate.of(2018,10, 30), 10);
 		
 		List<Item> booksInventory = new ArrayList<Item>();
 		System.out.println("Saving items...");

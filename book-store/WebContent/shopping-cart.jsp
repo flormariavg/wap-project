@@ -12,6 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<div id="result" class="result">
+		<label id="msg"></label>
+	</div>
 	<!--  Free CSS Templates from www.templatemo.com -->
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
@@ -50,37 +54,29 @@
 				<div id="templatemo_content_left" class="shopping_cart">
 					<!-- end of content left -->
 
-						<table>
-							<c:forEach items="${shoppingCart.products}" var="product">
-								<div class="templatemo_product_box">
+					
+						<c:forEach items="${shoppingCart.products}" var="product">
+							<div class="templatemo_product_box">
 
-									<h1>
-										<%-- ${item.name} <span>${item.author}</span> --%>
-										${product.item.name}
-									</h1>
-									<img src="${product.item.image}" alt="image" />
-									<div class="product_info">
-										<h3>${product.item.unitPrice}</h3>
-										<h3>${product.quantity}</h3>
-										<div class="buy_now_button">
-											<button onclick="">Delete</button>
-										</div>
+								<h1>
+									<%-- ${item.name} <span>${item.author}</span> --%>
+									${product.item.name}
+								</h1>
+								<img src="${product.item.image}" alt="image" />
+								<div class="product_info">
+									<h3>${product.item.unitPrice}</h3>
+									<h3>${product.quantity}</h3>
+									<div class="buy_now_button">
+										<button button onclick="deleteFromCart('${product.item.code}')">Delete</button>
 									</div>
-						</table>
-						<div class="cleaner">&nbsp;</div>
-					</div>
-
-					<div class="cleaner_with_width">&nbsp;</div>
-					<div class="cleaner_with_height">&nbsp;</div>
-					</c:forEach>
-				</c:when>
-				<c:when test="${shoppingCart.totalItems!=0}">
+								</div>
 					<div class="cleaner">&nbsp;</div>
-					<div class="cleaner_with_width">&nbsp;</div>
-					<div class="cleaner_with_height">&nbsp;</div>
-				</c:when>
+				</div>
 
-			</c:choose>
+				<div class="cleaner_with_width">&nbsp;</div>
+				<div class="cleaner_with_height">&nbsp;</div>
+				</c:forEach>
+			</c:if>
 			<div id="templatemo_content_left" class="shopping_cart">
 				<h1>Subtotal</h1>
 				<h3>Total Items: ${shoppingCart.totalItems}</h3>
