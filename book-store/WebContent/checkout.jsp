@@ -9,6 +9,9 @@
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/checkout.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -77,14 +80,14 @@
 					</table>
 				</div>
 
-				<img id="loader" style="display: none;" alt="loader img"
-					src="images/loader.gif" />
+				<div align="center">
+					<img id="loader" style="display: none;" alt="loader img"
+						src="images/loaderCheckout.gif" />
+				</div>
 				<button id="btn_proceed_checkout" type="button"
 					class="button-checkout">Proceed</button>
+
 				<br>
-
-
-
 			</div>
 			<!-- end of content left -->
 
