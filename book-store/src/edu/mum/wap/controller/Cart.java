@@ -45,10 +45,11 @@ public class Cart extends HttpServlet {
 			shoppingCart.calculatedTotalPrice();
 			shoppingCart.calculateShipping();
 			request.setAttribute("shoppingCart", shoppingCart);
+			request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 		}else
 			System.out.println("Error****************");
 		
-		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
+		
 //		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 	}
 
