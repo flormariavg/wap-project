@@ -6,13 +6,15 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<img id="loader" class="loader" alt="loader img"
+		src="images/loader-dots.gif" width="80px" />
 	<div id="result" class="result">
 		<label id="msg"></label>
 	</div>
@@ -50,11 +52,12 @@
 		<!-- end of header -->
 
 		<div id="templatemo_content" class="shopping_cart">
-			<c:if test="${shoppingCart.totalItems!=0}">
-				<div id="templatemo_content_left" class="shopping_cart">
-					<!-- end of content left -->
+			<c:choose>
+				<c:when test="${shoppingCart.totalItems!=0}">
+					<div id="templatemo_content_left" class="shopping_cart">
+						<!-- end of content left -->
 
-					
+
 						<c:forEach items="${shoppingCart.products}" var="product">
 							<div class="templatemo_product_box">
 
@@ -67,16 +70,24 @@
 									<h3>${product.item.unitPrice}</h3>
 									<h3>${product.quantity}</h3>
 									<div class="buy_now_button">
-										<button button onclick="deleteFromCart('${product.item.code}')">Delete</button>
+										<button button
+											onclick="deleteFromCart('${product.item.code}')">Delete</button>
 									</div>
 								</div>
-					<div class="cleaner">&nbsp;</div>
-				</div>
+								<div class="cleaner">&nbsp;</div>
+							</div>
 
-				<div class="cleaner_with_width">&nbsp;</div>
-				<div class="cleaner_with_height">&nbsp;</div>
-				</c:forEach>
-			</c:if>
+							<div class="cleaner_with_width">&nbsp;</div>
+							<div class="cleaner_with_height">&nbsp;</div>
+						</c:forEach>
+				</c:when>
+				<c:when test="${shoppingCart.totalItems!=0}">
+					<div class="cleaner">&nbsp;</div>
+					<div class="cleaner_with_width">&nbsp;</div>
+					<div class="cleaner_with_height">&nbsp;</div>
+				</c:when>
+
+			</c:choose>
 			<div id="templatemo_content_left" class="shopping_cart">
 				<h1>Subtotal</h1>
 				<h3>Total Items: ${shoppingCart.totalItems}</h3>
