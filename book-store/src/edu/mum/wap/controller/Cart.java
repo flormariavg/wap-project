@@ -38,7 +38,6 @@ public class Cart extends HttpServlet {
 		HttpSession session= request.getSession();
 		
 		ShoppingCart shoppingCart= (ShoppingCart) session.getAttribute("shoppingCart");
-<<<<<<< HEAD
 		
 		if(session.getAttribute("shoppingCart")!=null) {
 			System.out.println("Cart********************************");
@@ -46,23 +45,8 @@ public class Cart extends HttpServlet {
 			shoppingCart.calculatedTotalPrice();
 			shoppingCart.calculateShipping();
 			request.setAttribute("shoppingCart", shoppingCart);
-			
-			
 		}else
 			System.out.println("Error****************");
-=======
-//		if(session.getAttribute("shoppingCart")!=null) {
-//			System.out.println("Cart********************************");
-//			System.out.println("shoppingCart"+shoppingCart);
-//			shoppingCart.calculatedTotalPrice();
-//			shoppingCart.calculateShipping();
-//			request.setAttribute("shoppingCart", shoppingCart);
-//			
-//			
-//			request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
-//		}else
-//			System.out.println("Error****************");
->>>>>>> branch 'master' of https://github.com/flormariavg/wap-project.git
 		
 		request.getRequestDispatcher("shopping-cart.jsp").forward(request, response);
 			

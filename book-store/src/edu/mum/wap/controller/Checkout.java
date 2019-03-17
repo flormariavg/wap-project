@@ -21,7 +21,6 @@ import model.dataaccess.DataAccessFacade;
 @WebServlet("/checkout")
 public class Checkout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	ObjectMapper mapper = new ObjectMapper();
 
 	public Checkout() {
@@ -47,7 +46,6 @@ public class Checkout extends HttpServlet {
 				System.out.println("Cart********************************");
 				System.out.println("shoppingCart" + shoppingCart);
 
-<<<<<<< HEAD
 				User user = (User) session.getAttribute("user");
 				System.out.println("username"+user.getUsername());
 				shoppingCart.setUser(user);
@@ -83,23 +81,6 @@ public class Checkout extends HttpServlet {
 		
 		
 		
-=======
-		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
-//		if (session.getAttribute("shoppingCart") != null) {
-//			System.out.println("Cart********************************");
-//			System.out.println("shoppingCart" + shoppingCart);
-//
-//			shoppingCart.calculatedTotalPrice();
-//			shoppingCart.calculateShipping();
-//
-//			request.getRequestDispatcher("checkout.jsp").forward(request, response);
-//		} else {
-//			System.out.println("Error****************");
-//
-//		}
-		
-		request.getRequestDispatcher("checkout.jsp").forward(request, response);
->>>>>>> branch 'master' of https://github.com/flormariavg/wap-project.git
 
 	}
 
@@ -113,7 +94,7 @@ public class Checkout extends HttpServlet {
 		System.out.println("Proceed checkout :::: ");
 
 		String jsonSting = request.getParameter("product");
-//		Product product = mapper.readValue(request.getParameter("product"), Product.class);
+		Product product = mapper.readValue(request.getParameter("product"), Product.class);
 
 	}
 
