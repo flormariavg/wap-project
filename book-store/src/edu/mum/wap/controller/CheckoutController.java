@@ -77,7 +77,7 @@ public class CheckoutController extends HttpServlet {
 			}
 			
 		}else
-			request.getRequestDispatcher("views/login.jsp").forward(request, response);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		
 		
 		
