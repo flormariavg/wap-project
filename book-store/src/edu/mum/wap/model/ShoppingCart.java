@@ -88,7 +88,7 @@ public class ShoppingCart implements Serializable {
 
 	public void calculateShipping() {
 		Random r = new Random();
-		this.shipping = 1000 * r.nextDouble();
+		this.shipping = 10 * r.nextDouble();
 	}
 
 	/*

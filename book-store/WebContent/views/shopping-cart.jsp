@@ -8,7 +8,7 @@
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/store.js"></script>
+<script type="text/javascript" src="js/checkout.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -62,13 +62,12 @@
 							<div class="templatemo_product_box">
 
 								<h1>
-									<%-- ${item.name} <span>${item.author}</span> --%>
-									${product.item.name}
+									${product.item.name} <br><span>${product.item.author}</span>
 								</h1>
 								<img src="${product.item.image}" alt="image" />
 								<div class="product_info">
-									<h3>${product.item.unitPrice}</h3>
-									<h3>${product.quantity}</h3>
+									<h3> $ ${product.item.unitPrice}</h3>
+									<h3> ${product.quantity}</h3>
 									<div class="buy_now_button">
 										<button button
 											onclick="deleteFromCart('${product.item.code}')">Delete</button>
@@ -92,7 +91,7 @@
 				<h1>Subtotal</h1>
 				<h3>Total Items: ${shoppingCart.totalItems}</h3>
 				<h3>Books Price: ${shoppingCart.totalPrice}</h3>
-				<div class="buy_now_button_shopping_cart">
+				<div class="buy_now_button">
 					<a href="<c:url value="/checkout"></c:url>">Proceed to checkout</a>
 					<!-- 					<button onclick="">Proceed to checkout</button> -->
 				</div>
