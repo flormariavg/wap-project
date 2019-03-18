@@ -20,7 +20,7 @@
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
 			<ul>
-				<li><a href="login.jsp" class="current">Login</a></li>
+				<li><a id="loginId" href=${urlLogin} class="current">${btnLogin}</a></li>
 				<li><a href="store">Home</a></li>
 				<li><a href="subpage.html">Search</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
@@ -85,7 +85,10 @@
 			<!-- end of content left -->
 
 
-			<div class="store"><a class="store" href="<c:url value="/cart"></c:url>">Cart</a></div>
+			<div class="store">
+			<h1>${name}</h1>
+			<a class="store" href="<c:url value="/cart"></c:url>">Cart</a></div>
+			
 			<div id="templatemo_content_right">
 				<c:forEach items="${products}" var="item">
 					<div class="templatemo_product_box">
