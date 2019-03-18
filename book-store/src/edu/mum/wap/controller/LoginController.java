@@ -107,7 +107,7 @@ public class LoginController extends HttpServlet {
 			}else {
 			session.setAttribute("loggedIn", false);
             out.print("sorry, username or password error!");  
-            request.getRequestDispatcher("views/login.jsp").include(request, response); 
+            request.getRequestDispatcher("login.jsp").include(request, response); 
 //            request.getRequestDispatcher("login.jsp").forward(request, response);
 	          
 	        out.close();  
