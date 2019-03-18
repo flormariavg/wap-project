@@ -11,12 +11,12 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import edu.mum.wap.business.transaction.Transaction;
+import edu.mum.wap.business.Transaction;
+import edu.mum.wap.dao.DataAccess;
+import edu.mum.wap.dao.DataAccessFacade;
 import edu.mum.wap.model.Order;
 import edu.mum.wap.model.ShoppingCart;
-import edu.mum.wap.model.login.User;
-import model.dataaccess.DataAccess;
-import model.dataaccess.DataAccessFacade;
+import edu.mum.wap.model.User;
 
 @WebServlet("/checkout")
 public class Checkout extends HttpServlet {

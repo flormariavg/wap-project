@@ -1,4 +1,4 @@
-package edu.mum.wap.business.login;
+package edu.mum.wap.controller;
 
 import java.io.IOException;
 

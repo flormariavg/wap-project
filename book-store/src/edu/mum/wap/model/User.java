@@ -1,8 +1,6 @@
-package edu.mum.wap.model.login;
+package edu.mum.wap.model;
 
 import java.io.Serializable;
-
-import edu.mum.wap.model.Person;
 
 public class User implements Serializable {
 	

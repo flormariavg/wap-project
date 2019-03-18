@@ -1,11 +1,11 @@
-package edu.mum.wap.business.transaction;
+package edu.mum.wap.business;
 
 import java.util.List;
 
+import edu.mum.wap.dao.DataAccess;
+import edu.mum.wap.dao.DataAccessFacade;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
-import model.dataaccess.DataAccess;
-import model.dataaccess.DataAccessFacade;
 
 public class Transaction {
 	

@@ -1,4 +1,4 @@
-package model.dataaccess;
+package edu.mum.wap.dao;
 
 import java.util.List;
 

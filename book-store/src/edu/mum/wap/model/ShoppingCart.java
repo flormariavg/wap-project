@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import edu.mum.wap.model.login.User;
-
 public class ShoppingCart implements Serializable {
 
 	private static final long serialVersionUID = 1L;

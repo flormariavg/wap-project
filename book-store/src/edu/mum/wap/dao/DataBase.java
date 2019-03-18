@@ -1,9 +1,9 @@
-package edu.mum.wap.data;
+package edu.mum.wap.dao;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import edu.mum.wap.model.login.User;
+import edu.mum.wap.model.User;
 
 public class DataBase {
 	
