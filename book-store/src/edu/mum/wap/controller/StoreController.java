@@ -45,7 +45,7 @@ public class StoreController extends HttpServlet {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		request.setAttribute("products", products);
-		request.getRequestDispatcher("store.jsp").forward(request, response);
+		request.getRequestDispatcher("views/store.jsp").forward(request, response);
 	}
 
 	/**

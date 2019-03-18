@@ -8,8 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="store.jsp">Show page</a>
-99
 
 <%
     String redirectURL = "store";

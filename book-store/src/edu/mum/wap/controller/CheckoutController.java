@@ -70,14 +70,14 @@ public class CheckoutController extends HttpServlet {
 //				private Double totalPrice = 0.0;
 //				private Double shipping;
 //				
-				request.getRequestDispatcher("checkout.jsp").forward(request, response);
+				request.getRequestDispatcher("WEB-INF/views/checkout.jsp").forward(request, response);
 			} else {
 				System.out.println("Error****************");
 
 			}
 			
 		}else
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+			request.getRequestDispatcher("views/login.jsp").forward(request, response);
 		
 		
 		
