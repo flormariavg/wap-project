@@ -3,8 +3,42 @@ $(function () {
 	$("#loader").hide();
 	
 	$("#loginId").click(logout);
+	
+	$("#btn_proceed_register").click();
 });
 
+function click(){
+	
+	const order = {
+    		"shippingAddress":
+    			{
+    				"name": $("input[name=name]" ).val(),
+    				"addressLine":$("input[name=address]" ).val(),
+    				"city":$("input[name=city]" ).val(),
+    				"state":$("input[name=state]" ).val(),
+    				"country":$("input[name=country]" ).val(),
+    				"phoneNumber":$("input[name=phonenumber]" ).val(),
+    				"zipCode":$("input[name=zipcode]" ).val()
+    			}, 
+    		"paymentMethod": $("input[name=payment]:checked" ).val(),
+    		"billingAddress":
+        		{
+        			"name": $("input[name=namebill]" ).val(),
+    				"addressLine":$("input[name=addressbill]" ).val(),
+    				"city":$("input[name=citybill]" ).val(),
+    				"state":$("input[name=statebill]" ).val(),
+    				"country":$("input[name=countrybill]" ).val(),
+    				"phoneNumber":$("input[name=phonenumberbill]" ).val(),
+    				"zipCode":$("input[name=zipcodebill]" ).val()
+    			}
+    	};
+	
+	$.get(`register`)
+	.done()
+	.fail(function() {
+		alert("There was an error");
+	})
+}
 function logout(){
 	$.get(`logoutServlet`)
 	.done()

@@ -48,6 +48,13 @@ public class Order implements Serializable{
 	public void setShoppingCart(ShoppingCart shoppingCart) {
 		this.shoppingCart = shoppingCart;
 	}
+	
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
 
 	@Override
 	public String toString() {

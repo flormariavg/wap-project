@@ -22,7 +22,7 @@
 			<ul>
 				<li><a id="loginId" href=${urlLogin} class="current">${btnLogin}</a></li>
 				<li><a href="store">Home</a></li>
-				<li><a href="subpage.html">Search</a></li>
+				<li><a href="register.jsp">Register</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
