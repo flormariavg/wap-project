@@ -64,7 +64,7 @@ public class DataAccessFacade implements DataAccess {
 	}
 
 	public void saveNewItem(Item i) {
-		//Descomentar esta lina para q sirva
+		//No necesitan volver a comentarear la linea, solo lo corren y listo
 //List<Item> items = new ArrayList<>();
 	    List<Item> items = readItemList();
 	    //String ProdId = p.getProduct().getCode();
