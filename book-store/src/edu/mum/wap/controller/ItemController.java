@@ -14,6 +14,7 @@ import edu.mum.wap.dao.DataAccessFacade;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.User;
 
 /**
  * Servlet implementation class AddItem
@@ -59,8 +60,15 @@ public class ItemController extends HttpServlet {
 			System.out.println("shoppingCart" + shoppingCart);
 			session.setAttribute("shoppingCart", shoppingCart);
 		}else {
+			
 			shoppingCart.delete(product);
 			session.setAttribute("shoppingCart", shoppingCart);
+			
+			User user= (User) session.getAttribute("user");
+			if(user!=null) {
+				da.saveNewShopList(shoppingCart);
+			}
+			
 		}
 
 	}

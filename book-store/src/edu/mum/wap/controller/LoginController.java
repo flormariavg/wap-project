@@ -2,6 +2,7 @@ package edu.mum.wap.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import edu.mum.wap.dao.DataAccess;
 import edu.mum.wap.dao.DataAccessFacade;
 import edu.mum.wap.dao.DataBase;
+import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
 import edu.mum.wap.model.User;;
 
@@ -81,19 +83,26 @@ public class LoginController extends HttpServlet {
 					response.addCookie(cookie);
 				}
 				
-//				String 
-//				if(shoppingCart==null) {
-//					
-//				}
+				String redirect="store";
+				ShoppingCart shoppingCartSession = (ShoppingCart) session.getAttribute("shoppingCart");
 				
 				DataAccess da = new DataAccessFacade();
-				
 				ShoppingCart shoppingCart = da.readShopList();
+				
+				if(shoppingCartSession!=null) {
+					List<Product>products=shoppingCartSession.getProducts();
+					for (Product product : products) {
+						shoppingCart.addProducts(product);
+					}
+					redirect="cart";
+				}
+				
+				
 				session.setAttribute("shoppingCart", shoppingCart);
 				
 				System.out.println("****************");
 				
-				response.sendRedirect("store");
+				response.sendRedirect(redirect);
 				
 			}else {
 			session.setAttribute("loggedIn", false);
