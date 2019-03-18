@@ -66,8 +66,8 @@
 								</h1>
 								<img src="${product.item.image}" alt="image" />
 								<div class="product_info">
-									<h3>${product.item.unitPrice}</h3>
-									<h3>$ ${product.quantity}</h3>
+									<h3> $ ${product.item.unitPrice}</h3>
+									<h3> ${product.quantity}</h3>
 									<div class="buy_now_button">
 										<button button
 											onclick="deleteFromCart('${product.item.code}')">Delete</button>
