@@ -17,13 +17,13 @@ import edu.mum.wap.model.ShoppingCart;
  * Servlet implementation class Cart
  */
 @WebServlet("/cart")
-public class Cart extends HttpServlet {
+public class CartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Cart() {
+    public CartController() {
         super();
         // TODO Auto-generated constructor stub
     }

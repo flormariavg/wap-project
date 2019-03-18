@@ -19,11 +19,11 @@ import edu.mum.wap.model.ShoppingCart;
 import edu.mum.wap.model.User;
 
 @WebServlet("/checkout")
-public class Checkout extends HttpServlet {
+public class CheckoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	ObjectMapper mapper = new ObjectMapper();
 
-	public Checkout() {
+	public CheckoutController() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,28 +1,25 @@
 package edu.mum.wap.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import edu.mum.wap.dao.DataAccess;
-import edu.mum.wap.dao.DataAccessFacade;
-import edu.mum.wap.model.Item;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class LoadItem
+ * Servlet implementation class Logout
  */
-@WebServlet("/store")
-public class LoadItem extends HttpServlet {
+@WebServlet("/logoutServlet")
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoadItem() {
+	public LogoutController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,19 +30,26 @@ public class LoadItem extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.setContentType("text/html;charset=UTF-8");
-		
-		DataAccess da = new DataAccessFacade();
-		
-		List<Item> products= da.readItemList();
-		for (Item item : products) {
-			System.out.println(item);
-		}
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		request.setAttribute("products", products);
-		request.getRequestDispatcher("store.jsp").forward(request, response);
+//		// TODO Auto-generated method stub
+//
+//		response.setContentType("text/html");
+//		PrintWriter out = response.getWriter();
+//
+//		request.getRequestDispatcher("login.jsp").include(request, response);
+//
+//		for (Cookie cookie : request.getCookies()) {
+//			if (cookie.getName().equals("name")) {
+//				String userName = cookie.getValue();
+//				System.out.println("username: "+userName);
+//			}
+//		}
+//
+//		out.print("You are successfully logged out!");
+
+		HttpSession session = request.getSession();
+		session.invalidate();
+		response.sendRedirect("login.jsp");
+//		out.close();
 	}
 
 	/**
@@ -56,9 +60,6 @@ public class LoadItem extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-
-		
 	}
-	
 
 }

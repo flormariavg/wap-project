@@ -19,13 +19,13 @@ import edu.mum.wap.model.ShoppingCart;
  * Servlet implementation class AddItem
  */
 @WebServlet("/itemManager")
-public class AddItem extends HttpServlet {
+public class ItemController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AddItem() {
+	public ItemController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
