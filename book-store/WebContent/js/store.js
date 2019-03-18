@@ -1,8 +1,17 @@
 $(function () {
 	$("#result").hide();
 	$("#loader").hide();
+	
+	$("#loginId").click(logout);
 });
 
+function logout(){
+	$.get(`logoutServlet`)
+	.done()
+	.fail(function() {
+		alert("There was an error");
+	})
+}
 function addToCart(itemId) {
 	$("#result").show();
 	$("#loader").show();
