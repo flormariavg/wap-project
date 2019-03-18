@@ -62,8 +62,7 @@
 							<div class="templatemo_product_box">
 
 								<h1>
-									<%-- ${item.name} <span>${item.author}</span> --%>
-									${product.item.name}
+									${product.item.name} <br><span>${product.item.author}</span>
 								</h1>
 								<img src="${product.item.image}" alt="image" />
 								<div class="product_info">
@@ -92,7 +91,7 @@
 				<h1>Subtotal</h1>
 				<h3>Total Items: ${shoppingCart.totalItems}</h3>
 				<h3>Books Price: ${shoppingCart.totalPrice}</h3>
-				<div class="buy_now_button_shopping_cart">
+				<div class="buy_now_button">
 					<a href="<c:url value="/checkout"></c:url>">Proceed to checkout</a>
 					<!-- 					<button onclick="">Proceed to checkout</button> -->
 				</div>

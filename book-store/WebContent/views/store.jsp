@@ -6,13 +6,15 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<img id="loader" class="loader" alt="loader img"
+		src="images/loader-dots.gif" width="80px" />
 	<div id="result" class="result">
 		<label id="msg"></label>
 	</div>
@@ -85,13 +87,19 @@
 			<!-- end of content left -->
 
 
-			<div class="store"><a class="store" href="<c:url value="/cart"></c:url>">Cart</a></div>
+			<div class="store">
+			<label class="store">
+				<a class="store" href="<c:url value="/cart"></c:url>"><img class="store" src="images/cart.png" alt="image" />Cart</a>
+				</label>
+				
+			</div>
+			<br>
+			<br>
 			<div id="templatemo_content_right">
 				<c:forEach items="${products}" var="item">
 					<div class="templatemo_product_box">
 						<h1>
-							<%-- 						${item.name} <span>${item.author}</span> --%>
-							${item.name}
+							${item.name} <br><span>${item.author}</span>
 						</h1>
 						<img src=${item.image } alt="image" />
 						<div class="product_info">
@@ -109,7 +117,7 @@
 					<div class="cleaner_with_height">&nbsp;</div>
 				</c:forEach>
 
-								<div class="cleaner_with_height">&nbsp;</div>
+				<div class="cleaner_with_height">&nbsp;</div>
 
 				<a href="subpage.html"><img src="images/templatemo_ads.jpg"
 					alt="ads" /></a>
