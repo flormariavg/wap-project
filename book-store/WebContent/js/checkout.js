@@ -45,7 +45,7 @@
     function display(data) {
     	//To do the call to Transaction.commitTransaction
     	$("#msg").empty();
-		$("#msg").append("The item was successfully added to your shopping cart");
+		$("#msg").append("Your order is confirmed!!! Thank you for shopping at FSH Bookstore");
 		setTimeout(() => {
 			$("#result").hide();
 		}, 5000);

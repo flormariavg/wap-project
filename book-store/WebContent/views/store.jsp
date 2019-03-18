@@ -6,13 +6,15 @@
 <html>
 <head>
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<img id="loader" class="loader" alt="loader img"
+		src="images/loader-dots.gif" width="80px" />
 	<div id="result" class="result">
 		<label id="msg"></label>
 	</div>
@@ -20,7 +22,7 @@
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
 			<ul>
-				<li><a id="loginId" href=${urlLogin} class="current">${btnLogin}</a></li>
+				<li><a id="loginId" href=${urlLogin } class="current">${btnLogin}</a></li>
 				<li><a href="store">Home</a></li>
 				<li><a href="subpage.html">Search</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
@@ -86,15 +88,17 @@
 
 
 			<div class="store">
-			<h1>${name}</h1>
-			<a class="store" href="<c:url value="/cart"></c:url>">Cart</a></div>
-			
+				<label class="store"> <a class="store"
+					href="<c:url value="/cart"></c:url>"><img class="store"
+						src="images/cart.png" alt="image" />Cart</a>
+				</label>
+			</div>
 			<div id="templatemo_content_right">
 				<c:forEach items="${products}" var="item">
 					<div class="templatemo_product_box">
 						<h1>
-							<%-- 						${item.name} <span>${item.author}</span> --%>
-							${item.name}
+							${item.name} <br>
+							<span>${item.author}</span>
 						</h1>
 						<img src=${item.image } alt="image" />
 						<div class="product_info">
@@ -112,7 +116,7 @@
 					<div class="cleaner_with_height">&nbsp;</div>
 				</c:forEach>
 
-								<div class="cleaner_with_height">&nbsp;</div>
+				<div class="cleaner_with_height">&nbsp;</div>
 
 				<a href="subpage.html"><img src="images/templatemo_ads.jpg"
 					alt="ads" /></a>
