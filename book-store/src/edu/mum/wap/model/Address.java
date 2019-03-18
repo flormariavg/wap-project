@@ -8,6 +8,7 @@ public class Address implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private String name;
 	private String addressLine;
 	private String city;
 	private String state;
@@ -15,6 +16,9 @@ public class Address implements Serializable {
 	private String phoneNumber;
 	private String zipCode;
 	
+	public Address() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Address(String addressLine, String city, String state, String country, String phoneNumber, String zipCode) {
 		super();
@@ -25,6 +29,16 @@ public class Address implements Serializable {
 		this.phoneNumber = phoneNumber;
 		this.zipCode = zipCode;
 	}
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getAddressLine() {
 		return addressLine;
 	}
@@ -60,6 +74,12 @@ public class Address implements Serializable {
 	}
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [name=" + name + ", addressLine=" + addressLine + ", city=" + city + ", state=" + state
+				+ ", country=" + country + ", phoneNumber=" + phoneNumber + ", zipCode=" + zipCode + "]";
 	}
 
 }

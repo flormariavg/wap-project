@@ -8,20 +8,21 @@
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/store.js"></script>
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/checkout.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
+	<div id="result" class="result">
+		<label id="msg"></label>
+	</div>
 	<!--  Free CSS Templates from www.templatemo.com -->
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
 			<ul>
 				<li><a href="login.jsp" class="current">Login</a></li>
-				<li><a href="subpage.html">Home</a></li>
+				<li><a href="store">Home</a></li>
 				<li><a href="subpage.html">Search</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
 				<li><a href="#">Contact</a></li>
@@ -79,19 +80,12 @@
 						</tr>
 					</table>
 				</div>
-
-				<div align="center">
-					<img id="loader" style="display: none;" alt="loader img"
-						src="images/loaderCheckout.gif" />
-				</div>
 				<button id="btn_proceed_checkout" type="button"
 					class="button-checkout">Proceed</button>
 
 				<br>
 			</div>
 			<!-- end of content left -->
-
-
 
 			<div id="templatemo_content_left_ShoppingCart">
 				<br>
@@ -102,7 +96,7 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input id="name"></td>
+							<td><input name="name"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
@@ -117,8 +111,16 @@
 							<td><input name="state"></td>
 						</tr>
 						<tr>
+							<td>Country:</td>
+							<td><input name="country"></td>
+						</tr>
+						<tr>
 							<td>ZipCode:</td>
 							<td><input name="zipcode"></td>
+						</tr>
+						<tr>
+							<td>Phone number:</td>
+							<td><input name="phonenumber"></td>
 						</tr>
 					</table>
 					<br>
@@ -163,8 +165,16 @@
 							<td><input name="statebill"></td>
 						</tr>
 						<tr>
+							<td>Country:</td>
+							<td><input name="countrybill"></td>
+						</tr>
+						<tr>
 							<td>ZipCode:</td>
 							<td><input name="zipcodebill"></td>
+						</tr>
+						<tr>
+							<td>Phone number:</td>
+							<td><input name="phonenumberbill"></td>
 						</tr>
 					</table>
 				</div>

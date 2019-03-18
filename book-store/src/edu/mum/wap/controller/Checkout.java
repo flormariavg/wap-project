@@ -1,7 +1,6 @@
 package edu.mum.wap.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import edu.mum.wap.model.Product;
+import edu.mum.wap.business.transaction.Transaction;
+import edu.mum.wap.model.Order;
 import edu.mum.wap.model.ShoppingCart;
 import edu.mum.wap.model.login.User;
 import model.dataaccess.DataAccess;
@@ -93,8 +93,19 @@ public class Checkout extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("Proceed checkout :::: ");
 
-		String jsonSting = request.getParameter("product");
-		Product product = mapper.readValue(request.getParameter("product"), Product.class);
+		String jsonSting = request.getParameter("order");
+		System.out.println(jsonSting);
+		
+		Order order = mapper.readValue(jsonSting, Order.class);
+		
+		HttpSession session = request.getSession();
+		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
+		
+		order.setShoppingCart(shoppingCart);
+		
+		boolean result = new Transaction().commitTransaction(shoppingCart);
+		System.out.println(order);
+		System.out.println("Tx result : "+result);
 
 	}
 

@@ -1,15 +1,40 @@
 (function (lib) {
 	var $= lib;
     $(function () {
-		$("#loader").hide();
+    	$("#result").hide();
+    	$("#loader").hide();
 		
         $("#btn_proceed_checkout.button-checkout").click(function () {
-            $.get("delay.php")
-                .done(display)
+        	const order = {
+        		"shippingAddress":
+        			{
+        				"name": $("input[name=name]" ).val(),
+        				"addressLine":$("input[name=address]" ).val(),
+        				"city":$("input[name=city]" ).val(),
+        				"state":$("input[name=state]" ).val(),
+        				"country":$("input[name=country]" ).val(),
+        				"phoneNumber":$("input[name=phonenumber]" ).val(),
+        				"zipCode":$("input[name=zipcode]" ).val()
+        			}, 
+        		"paymentMethod": $("input[name=payment]:checked" ).val(),
+        		"billingAddress":
+            		{
+	        			"name": $("input[name=namebill]" ).val(),
+	    				"addressLine":$("input[name=addressbill]" ).val(),
+	    				"city":$("input[name=citybill]" ).val(),
+	    				"state":$("input[name=statebill]" ).val(),
+	    				"country":$("input[name=countrybill]" ).val(),
+	    				"phoneNumber":$("input[name=phonenumberbill]" ).val(),
+	    				"zipCode":$("input[name=zipcodebill]" ).val()
+        			}
+        	};
+            $.post("checkout", {"order":JSON.stringify(order)}
+            	).done(display)
                 .fail(ajaxFailure)
-                .always(setTimeout(waitnHide,5000));
+                .always(setTimeout(waitnHide,6000));
 
-            $("#loader").show();
+            $("#result").show();
+        	$("#loader").show();
         });
     });
 
@@ -19,7 +44,11 @@
     
     function display(data) {
     	//To do the call to Transaction.commitTransaction
-		alert("Thanks for purchasing in our BookStore!");
+    	$("#msg").empty();
+		$("#msg").append("The item was successfully added to your shopping cart");
+		setTimeout(() => {
+			$("#result").hide();
+		}, 5000);
     }
 
     function ajaxFailure() {

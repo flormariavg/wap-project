@@ -23,7 +23,7 @@
 		<div id="templatemo_menu">
 			<ul>
 				<li><a href="login.jsp" class="current">Login</a></li>
-				<li><a href="subpage.html">Home</a></li>
+				<li><a href="store">Home</a></li>
 				<li><a href="subpage.html">Search</a></li>
 				<li><a href="subpage.html">New Releases</a></li>
 				<li><a href="#">Contact</a></li>
