@@ -17,7 +17,8 @@ public class DataBase {
 	public static void addUser() {
 		users.put("flor", new User("flor", "123"));
 		users.put("admin", new User("admin", "123"));
-		users.put("test", new User("test", "123"));
+		users.put("carlos", new User("carlos", "123"));
+		users.put("victor", new User("victor", "123"));
 	}
 	
 	public static Map<String, User> getUsers() {
