@@ -8,7 +8,7 @@
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/checkout.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -50,114 +50,49 @@
 		</div>
 		<!-- end of header -->
 
+		<div id="templatemo_content">
+
+			<div id="templatemo_content_right_ShoppingCart">
+				<br>
+				<div id="div2">
+					<p class="border-bottom">
+						<strong>Order confirmation</strong>
+					</p>
+					<table>
+						<tr>
+							<td>Products:</td>
+							<td><label class="label-checkout" name="totalproducts">${shoppingCart.totalPrice}</label></td>
+						</tr>
+						<tr>
+							<td>Shipping:</td>
+							<td><label class="label-checkout" name="shipping">${shoppingCart.shipping}</label></td>
+						</tr>
+					</table>
+
+
+					<p class="border-bottom">
+						<strong>Total of the order</strong>
+					</p>
+					<table>
+						<tr>
+							<td>Total:</td>
+							<td><label class="label-checkout" name="totalall">${shoppingCart.total}</label></td>
+						</tr>
+					</table>
+				</div>
+				<br>
+			</div>
+			<!-- end of content left -->
+
 			<div id="templatemo_content_left_ShoppingCart">
 				<br>
 				<div id="div1">
 					<p class="border-bottom left">
-						<strong>Registration</strong>
+						<strong>Order Placed !!!!!</strong>
 					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<td>Username:</td>
-							<td><input name="username"></td>
-						</tr>
-						<tr>
-							<td>Password:</td>
-							<td><input type="password" name="password"></td>
-						</tr>
-						<tr>
-							<td>Firstname:</td>
-							<td><input name="firstname"></td>
-						</tr>
-						<tr>
-							<td>Lastname:</td>
-							<td><input name="lastname"></td>
-						</tr>
-						<tr>
-							<td>Email:</td>
-							<td><input name="email"></td>
-						</tr>
-						<tr>
-							<td>Address:</td>
-							<td><input name="address"></td>
-						</tr>
-						<tr>
-							<td>City:</td>
-							<td><input name="city"></td>
-						</tr>
-						<tr>
-							<td>State:</td>
-							<td><input name="state"></td>
-						</tr>
-						<tr>
-							<td>Country:</td>
-							<td><input name="country"></td>
-						</tr>
-						<tr>
-							<td>ZipCode:</td>
-							<td><input name="zipcode"></td>
-						</tr>
-						<tr>
-							<td>Phone number:</td>
-							<td><input name="phonenumber"></td>
-						</tr>
-					</table>
-					<br>
-					<p class="border-bottom left">
-						<strong>Prefered Payment Method</strong>
-					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<label><input type="radio" name="payment" value="credit">
-								CreditCard</label>
-							<br>
-						</tr>
-						<tr>
-							<label><input type="radio" name="payment" value="debit">
-								DebitCard</label>
-							<br>
-						</tr>
-						<tr>
-							<label><input type="radio" name="payment" value="other">
-								Other</label>
-						</tr>
-					</table>
-					<br>
-					<p class="border-bottom left">
-						<strong>Billing Address</strong>
-					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<td>Address:</td>
-							<td><input name="addressbill"></td>
-						</tr>
-						<tr>
-							<td>City:</td>
-							<td><input name="citybill"></td>
-						</tr>
-						<tr>
-							<td>State:</td>
-							<td><input name="statebill"></td>
-						</tr>
-						<tr>
-							<td>Country:</td>
-							<td><input name="countrybill"></td>
-						</tr>
-						<tr>
-							<td>ZipCode:</td>
-							<td><input name="zipcodebill"></td>
-						</tr>
-						<tr>
-							<td>Phone number:</td>
-							<td><input name="phonenumberbill"></td>
-						</tr>
-					</table>
+					Your order is confirmed!!! Thank you for shopping at FSH Bookstore
 				</div>
-				<button id="btn_register" type="button"
-					class="button-checkout">Register</button>
-
 				<div class="cleaner_with_height">&nbsp;</div>
-
 			</div>
 			<!-- end of content right -->
 

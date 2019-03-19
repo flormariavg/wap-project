@@ -11,11 +11,12 @@ import java.util.List;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.User;
 
 public class DataAccessFacade implements DataAccess {
 
 	enum StorageType {
-		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS;
+		ITEMS, PRODUCTS, CARTLINES, SHOPPINGCARTS, USERS;
 	}
 
 	public static final String OUTPUT_DIR = "c:\\temp\\dataaccess\\storage";
@@ -124,6 +125,32 @@ public class DataAccessFacade implements DataAccess {
 	public ShoppingCart readShopList() {
 		//Returns a product list
 		return (ShoppingCart) readFromStorage(StorageType.SHOPPINGCARTS);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<User> readUserList() {
+		//Returns a product list
+		return (List<User>) readFromStorage(StorageType.USERS);
+	}
+	
+	public void saveNewUser(User user) {
+//	    List<User> users = readUserList();
+	    List<User> users = new ArrayList<User>();
+	    //String ProdId = p.getProduct().getCode();
+	    users.add(user);
+	    saveToStorage(StorageType.USERS,users);
+	}
+	
+	public User findUserByUsername(String username) {
+		//Returns a product list
+		List<User> users =
+				(List<User>) readFromStorage(StorageType.USERS);
+		for(User user: users) {
+			if(user.getUsername().equals(username)) {
+				return user;
+			}
+		}
+		return null;
 	}
 }
 

@@ -16,6 +16,10 @@ public class User implements Serializable {
 	private Address billingAddress;
 	private ShoppingCart shoppingCart;
 	
+	public User() {
+		
+	}
+	
 	public User(String username, String password) {
 		// TODO Auto-generated constructor stub
 		this.username= username;

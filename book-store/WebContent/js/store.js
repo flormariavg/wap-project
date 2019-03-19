@@ -1,10 +1,7 @@
 $(function () {
 	$("#result").hide();
 	$("#loader").hide();
-	
 	$("#loginId").click(logout);
-	
-	$("#btn_proceed_register").click();
 });
 
 function click(){

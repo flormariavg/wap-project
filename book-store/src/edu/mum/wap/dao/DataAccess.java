@@ -5,6 +5,7 @@ import java.util.List;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.User;
 
 public interface DataAccess {
 	public void saveNewProduct(Product p);
@@ -17,4 +18,7 @@ public interface DataAccess {
 	public List<Item> readItemList();
 	public Item findItemByCode(String code);
 	public void resetInventory();
+	public void saveNewUser(User user);
+	public List<User> readUserList();
+	public User findUserByUsername(String username);
 }
