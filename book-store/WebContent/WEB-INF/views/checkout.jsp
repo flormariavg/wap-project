@@ -96,31 +96,31 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="name" required="required"></td>
+							<td><input name="name" required="required" value="${shoppingCart.user.person.firstName} ${shoppingCart.user.person.lastName}"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="address" required="required"></td>
+							<td><input name="address" required="required" value="${shoppingCart.user.person.address.addressLine}"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="city" required="required"></td>
+							<td><input name="city" required="required" value="${shoppingCart.user.person.address.city}"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="state" required="required"></td>
+							<td><input name="state" required="required" value="${shoppingCart.user.person.address.state}"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="country" required="required"></td>
+							<td><input name="country" required="required" value="${shoppingCart.user.person.address.country}"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcode" required="required"></td>
+							<td><input name="zipcode" required="required" value="${shoppingCart.user.person.address.zipCode}"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumber" required="required"></td>
+							<td><input name="phonenumber" required="required" value="${shoppingCart.user.person.address.phoneNumber}"></td>
 						</tr>
 					</table>
 					<br>
@@ -150,31 +150,31 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="namebill" required="required"></td>
+							<td><input name="namebill" required="required" value="${shoppingCart.user.person.firstName} ${shoppingCart.user.person.lastName}"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="addressbill" required="required"></td>
+							<td><input name="addressbill" required="required" value="${shoppingCart.user.billingAddress.addressLine}"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="citybill" required="required"></td>
+							<td><input name="citybill" required="required" value="${shoppingCart.user.billingAddress.city}"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="statebill" required="required"></td>
+							<td><input name="statebill" required="required" value="${shoppingCart.user.billingAddress.state}"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="countrybill" required="required"></td>
+							<td><input name="countrybill" required="required" value="${shoppingCart.user.billingAddress.country}"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcodebill" required="required"></td>
+							<td><input name="zipcodebill" required="required" value="${shoppingCart.user.billingAddress.zipCode}"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumberbill" required="required"></td>
+							<td><input name="phonenumberbill" required="required" value="${shoppingCart.user.billingAddress.phoneNumber}"></td>
 						</tr>
 					</table>
 				</div>
