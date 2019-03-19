@@ -25,8 +25,6 @@
 				<li><a id="loginId" href=${urlLogin } class="current">${btnLogin}</a></li>
 				<li><a href="store">Home</a></li>
 				<li><a href="register.jsp">Register</a></li>
-				<li><a href="subpage.html">New Releases</a></li>
-				<li><a href="#">Contact</a></li>
 			</ul>
 		</div>
 		<!-- end of menu -->
@@ -36,7 +34,6 @@
 				<p>
 					<span>25%</span> discounts for purchase over $80
 				</p>
-				<a href="subpage.html" style="margin-left: 50px;">Read more...</a>
 			</div>
 
 
@@ -46,7 +43,6 @@
 					<li>Maece nas metus</li>
 					<li>In sed risus ac feli</li>
 				</ul>
-				<a href="subpage.html" style="margin-left: 50px;">Read more...</a>
 			</div>
 		</div>
 		<!-- end of header -->

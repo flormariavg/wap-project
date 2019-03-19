@@ -21,11 +21,9 @@
 	<div id="templatemo_container">
 		<div id="templatemo_menu">
 			<ul>
-				<li><a href="login.jsp" class="current">Login</a></li>
+				<li><a id="loginId" href=${urlLogin } class="current">${btnLogin}</a></li>
 				<li><a href="store">Home</a></li>
-				<li><a href="subpage.html">Search</a></li>
-				<li><a href="subpage.html">New Releases</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="register.jsp">Register</a></li>
 			</ul>
 		</div>
 		<!-- end of menu -->
@@ -35,7 +33,6 @@
 				<p>
 					<span>25%</span> discounts for purchase over $80
 				</p>
-				<a href="subpage.html" style="margin-left: 50px;">Read more...</a>
 			</div>
 
 
@@ -45,7 +42,6 @@
 					<li>Maece nas metus</li>
 					<li>In sed risus ac feli</li>
 				</ul>
-				<a href="subpage.html" style="margin-left: 50px;">Read more...</a>
 			</div>
 		</div>
 		<!-- end of header -->
