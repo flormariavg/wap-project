@@ -53,12 +53,13 @@ public class LoginController extends HttpServlet {
         
         DataAccess da = new DataAccessFacade();
         
-		
 		String name = request.getParameter("user");
 		String password = request.getParameter("password");
 		String remember = request.getParameter("remember");
 		
 		User user = da.findUserByUsername(name);
+		
+		System.out.println("User: "+user);
 		
 //		HttpSession session= request.getSession();
 		if(user!=null) {
@@ -114,6 +115,9 @@ public class LoginController extends HttpServlet {
 	          
 	        out.close();  
 			}
+		}else {
+			request.getRequestDispatcher(""
+            		+ "login.jsp").include(request, response); 
 		}
 	}
 

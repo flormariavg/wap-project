@@ -96,31 +96,31 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="name"></td>
+							<td><input name="name" value="${shoppingCart.user.person.firstName} ${shoppingCart.user.person.lastName}"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="address"></td>
+							<td><input name="address" value="${shoppingCart.user.person.address.addressLine}"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="city"></td>
+							<td><input name="city" value="${shoppingCart.user.person.address.city}"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="state"></td>
+							<td><input name="state" value="${shoppingCart.user.person.address.state}"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="country"></td>
+							<td><input name="country" value="${shoppingCart.user.person.address.country}"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcode"></td>
+							<td><input name="zipcode" value="${shoppingCart.user.person.address.zipCode}"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumber"></td>
+							<td><input name="phonenumber" value="${shoppingCart.user.person.address.phoneNumber}"></td>
 						</tr>
 					</table>
 					<br>
@@ -150,31 +150,31 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="namebill"></td>
+							<td><input name="namebill" value="${shoppingCart.user.person.firstName} ${shoppingCart.user.person.lastName}"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="addressbill"></td>
+							<td><input name="addressbill" value="${shoppingCart.user.billingAddress.addressLine}"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="citybill"></td>
+							<td><input name="citybill" value="${shoppingCart.user.billingAddress.city}"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="statebill"></td>
+							<td><input name="statebill" value="${shoppingCart.user.billingAddress.state}"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="countrybill"></td>
+							<td><input name="countrybill" value="${shoppingCart.user.billingAddress.country}"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcodebill"></td>
+							<td><input name="zipcodebill" value="${shoppingCart.user.billingAddress.zipCode}"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumberbill"></td>
+							<td><input name="phonenumberbill" value="${shoppingCart.user.billingAddress.phoneNumber}"></td>
 						</tr>
 					</table>
 				</div>

@@ -65,10 +65,10 @@ public class DataAccessFacade implements DataAccess {
 	}
 
 	public void saveNewItem(Item i) {
-		//No necesitan volver a comentarear la linea, solo lo corren y listo
-//List<Item> items = new ArrayList<>();
 	    List<Item> items = readItemList();
-	    //String ProdId = p.getProduct().getCode();
+	    if(items == null) {
+	    	items = new ArrayList<>();
+	    }
 	    items.add(i);
 	    saveToStorage(StorageType.ITEMS,items);
 	}
@@ -134,17 +134,18 @@ public class DataAccessFacade implements DataAccess {
 	}
 	
 	public void saveNewUser(User user) {
-//	    List<User> users = readUserList();
-	    List<User> users = new ArrayList<User>();
-	    //String ProdId = p.getProduct().getCode();
+	    List<User> users = readUserList();
+	    if(users == null) {
+	    	users = new ArrayList<User>();
+	    }
 	    users.add(user);
 	    saveToStorage(StorageType.USERS,users);
 	}
 	
 	public User findUserByUsername(String username) {
-		//Returns a product list
 		List<User> users =
 				(List<User>) readFromStorage(StorageType.USERS);
+		if(users!=null)
 		for(User user: users) {
 			if(user.getUsername().equals(username)) {
 				return user;
