@@ -48,6 +48,7 @@
 		$("#msg").append("Your order is confirmed!!! Thank you for shopping at FSH Bookstore");
 		setTimeout(() => {
 			$("#result").hide();
+			window.location.href = "confirmation.jsp";
 		}, 5000);
     }
 

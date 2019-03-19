@@ -8,7 +8,7 @@
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/checkout.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -58,8 +58,24 @@
 					</p>
 					<table class="table_ckeckout">
 						<tr>
-							<td>Name:</td>
-							<td><input name="name"></td>
+							<td>Username:</td>
+							<td><input name="username"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="password" name="password"></td>
+						</tr>
+						<tr>
+							<td>Firstname:</td>
+							<td><input name="firstname"></td>
+						</tr>
+						<tr>
+							<td>Lastname:</td>
+							<td><input name="lastname"></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><input name="email"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
@@ -88,7 +104,7 @@
 					</table>
 					<br>
 					<p class="border-bottom left">
-						<strong>2. Payment Method</strong>
+						<strong>Prefered Payment Method</strong>
 					</p>
 					<table class="table_ckeckout">
 						<tr>
@@ -108,13 +124,9 @@
 					</table>
 					<br>
 					<p class="border-bottom left">
-						<strong>3. Billing Address</strong>
+						<strong>Billing Address</strong>
 					</p>
 					<table class="table_ckeckout">
-						<tr>
-							<td>Name:</td>
-							<td><input name="namebill"></td>
-						</tr>
 						<tr>
 							<td>Address:</td>
 							<td><input name="addressbill"></td>
@@ -141,7 +153,7 @@
 						</tr>
 					</table>
 				</div>
-				<button id="btn_proceed_register" type="button"
+				<button id="btn_register" type="button"
 					class="button-checkout">Register</button>
 
 				<div class="cleaner_with_height">&nbsp;</div>

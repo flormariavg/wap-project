@@ -12,6 +12,9 @@ public class Person implements Serializable{
 	private Address address;
 	private String email;
 	
+	public Person() {
+	}
+	
 	public Person(String firstName, String lastName, Address address, String email) {
 		super();
 		this.firstName = firstName;

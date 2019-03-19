@@ -7,6 +7,7 @@ import java.util.List;
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
 	private String username;
 	private String password;
 	private Person person;
@@ -15,6 +16,10 @@ public class User implements Serializable {
 	private String paymentMethod;
 	private Address billingAddress;
 	private ShoppingCart shoppingCart;
+	
+	public User() {
+		
+	}
 	
 	public User(String username, String password) {
 		// TODO Auto-generated constructor stub

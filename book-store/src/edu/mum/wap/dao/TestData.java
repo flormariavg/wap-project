@@ -10,6 +10,7 @@ import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Person;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
+import edu.mum.wap.model.User;
 
 public class TestData {
 
@@ -75,6 +76,8 @@ public class TestData {
 		ShoppingCart sc2;
 		sc2 = da.readShopList();
 		System.out.println(sc2.toString());
+		
+//		da.saveNewUser(new User("flor", "123"));
 		
 	}
 }

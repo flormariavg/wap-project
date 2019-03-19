@@ -80,9 +80,6 @@
 						</tr>
 					</table>
 				</div>
-				<button id="btn_proceed_checkout" type="button"
-					class="button-checkout">Proceed</button>
-
 				<br>
 			</div>
 			<!-- end of content left -->
@@ -91,97 +88,11 @@
 				<br>
 				<div id="div1">
 					<p class="border-bottom left">
-						<strong>1. Shipping Address</strong>
+						<strong>Order Placed !!!!!</strong>
 					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<td>Name:</td>
-							<td><input name="name"></td>
-						</tr>
-						<tr>
-							<td>Address:</td>
-							<td><input name="address"></td>
-						</tr>
-						<tr>
-							<td>City:</td>
-							<td><input name="city"></td>
-						</tr>
-						<tr>
-							<td>State:</td>
-							<td><input name="state"></td>
-						</tr>
-						<tr>
-							<td>Country:</td>
-							<td><input name="country"></td>
-						</tr>
-						<tr>
-							<td>ZipCode:</td>
-							<td><input name="zipcode"></td>
-						</tr>
-						<tr>
-							<td>Phone number:</td>
-							<td><input name="phonenumber"></td>
-						</tr>
-					</table>
-					<br>
-					<p class="border-bottom left">
-						<strong>2. Payment Method</strong>
-					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<label><input type="radio" name="payment" value="credit">
-								CreditCard</label>
-							<br>
-						</tr>
-						<tr>
-							<label><input type="radio" name="payment" value="debit">
-								DebitCard</label>
-							<br>
-						</tr>
-						<tr>
-							<label><input type="radio" name="payment" value="other">
-								Other</label>
-						</tr>
-					</table>
-					<br>
-					<p class="border-bottom left">
-						<strong>3. Billing Address</strong>
-					</p>
-					<table class="table_ckeckout">
-						<tr>
-							<td>Name:</td>
-							<td><input name="namebill"></td>
-						</tr>
-						<tr>
-							<td>Address:</td>
-							<td><input name="addressbill"></td>
-						</tr>
-						<tr>
-							<td>City:</td>
-							<td><input name="citybill"></td>
-						</tr>
-						<tr>
-							<td>State:</td>
-							<td><input name="statebill"></td>
-						</tr>
-						<tr>
-							<td>Country:</td>
-							<td><input name="countrybill"></td>
-						</tr>
-						<tr>
-							<td>ZipCode:</td>
-							<td><input name="zipcodebill"></td>
-						</tr>
-						<tr>
-							<td>Phone number:</td>
-							<td><input name="phonenumberbill"></td>
-						</tr>
-					</table>
+					Your order is confirmed!!! Thank you for shopping at FSH Bookstore
 				</div>
-
-
 				<div class="cleaner_with_height">&nbsp;</div>
-
 			</div>
 			<!-- end of content right -->
 

@@ -51,13 +51,15 @@ public class LoginController extends HttpServlet {
 		response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
         
-		Map<String, User> m= DataBase.getUsers();
+        DataAccess da = new DataAccessFacade();
+        
 		
 		String name = request.getParameter("user");
 		String password = request.getParameter("password");
 		String remember = request.getParameter("remember");
 		
-		User user = m.get(name);
+		User user = da.findUserByUsername(name);
+		
 //		HttpSession session= request.getSession();
 		if(user!=null) {
 			HttpSession session= request.getSession();
@@ -86,7 +88,6 @@ public class LoginController extends HttpServlet {
 				String redirect="store";
 				ShoppingCart shoppingCartSession = (ShoppingCart) session.getAttribute("shoppingCart");
 				
-				DataAccess da = new DataAccessFacade();
 				ShoppingCart shoppingCart = da.readShopList();
 				
 				if(shoppingCartSession!=null) {
