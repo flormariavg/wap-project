@@ -36,10 +36,10 @@ public class CheckoutController extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		HttpSession session = request.getSession();
-		
+
 		if(session.getAttribute("loggedIn")==null)
 			session.setAttribute("loggedIn", false);
-		
+
 		if(session.getAttribute("loggedIn").equals(true)) {
 			ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
 			if (session.getAttribute("shoppingCart") != null) {
@@ -49,38 +49,38 @@ public class CheckoutController extends HttpServlet {
 				User user = (User) session.getAttribute("user");
 				System.out.println("username"+user.getUsername());
 				shoppingCart.setUser(user);
-				
+
 				shoppingCart.calculatedTotalPrice();
 				shoppingCart.calculateShipping();
 
 				System.out.println("shoppingCart"+shoppingCart);
-				
-				
+
+
 				DataAccess da = new DataAccessFacade();
 				da.saveNewShopList(shoppingCart);
-				
+
 				ShoppingCart shoppingCart2 = da.readShopList();
-				
+
 				System.out.println("****************");
 				System.out.println("shoppingCart 2: "+shoppingCart2);
-				
-//				private User user;
-//				List<Product> products;
-//				private int totalItems = 0;
-//				private Double totalPrice = 0.0;
-//				private Double shipping;
-//				
+
+				//				private User user;
+				//				List<Product> products;
+				//				private int totalItems = 0;
+				//				private Double totalPrice = 0.0;
+				//				private Double shipping;
+				//				
 				request.getRequestDispatcher("WEB-INF/views/checkout.jsp").forward(request, response);
 			} else {
 				System.out.println("Error****************");
 
 			}
-			
+
 		}else
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-		
-		
-		
+
+
+
 		//		request.getRequestDispatcher("checkout.jsp").forward(request, response);
 	}
 
@@ -95,17 +95,30 @@ public class CheckoutController extends HttpServlet {
 
 		String jsonSting = request.getParameter("order");
 		System.out.println(jsonSting);
-		
+
 		Order order = mapper.readValue(jsonSting, Order.class);
-		
+
 		HttpSession session = request.getSession();
 		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
-		
+
 		order.setShoppingCart(shoppingCart);
-		
+
 		boolean result = new Transaction().commitTransaction(shoppingCart);
 		System.out.println(order);
 		System.out.println("Tx result : "+result);
+//		String message="";
+//		if(!result) {
+//			message="We cannot process your order, the items are not available";
+//			request.setAttribute("message", message);
+//
+//			request.getRequestDispatcher("WEB-INF/views/checkout.jsp").forward(request, response);
+//		}
+//		else {
+//			message="Your order is confirmed!!! Thank you for shopping at FSH Bookstore";
+//			request.setAttribute("message", message);
+//			request.getRequestDispatcher("WEB-INF/views/checkout.jsp").forward(request, response);
+//		}
+		
 
 	}
 

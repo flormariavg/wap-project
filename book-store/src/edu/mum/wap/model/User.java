@@ -7,7 +7,6 @@ import java.util.List;
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
 	private String username;
 	private String password;
 	private Person person;
@@ -70,6 +69,10 @@ public class User implements Serializable {
 	}
 	public void setShoppingCart(ShoppingCart shoppingCart) {
 		this.shoppingCart = shoppingCart;
+	}
+	@Override
+	public String toString() {
+		return  username;
 	}
 
 }
