@@ -1,9 +1,11 @@
 package edu.mum.wap.business;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.mum.wap.dao.DataAccess;
 import edu.mum.wap.dao.DataAccessFacade;
+import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
 
@@ -26,8 +28,13 @@ public class Transaction {
 		for (Product book:prodList) {
 			//For each product in Shopping Cart, affect the inventory reducing quantity
 			itemQty = book.getQuantity();								//# books bought in this transaction
-			book.setQuantity(book.getItem().getQuantity()-itemQty);		//Reduce inventory
+			book.getItem().setQuantity(book.getItem().getQuantity()-itemQty);		//Reduce inventory
 			da.saveNewItem(book.getItem());
+		}
+		System.out.println("==============Despues de transaccion============");
+		List<Item> products= da.readItemList();
+		for (Item item : products) {
+			System.out.println(item);
 		}
 		return true;
 	}

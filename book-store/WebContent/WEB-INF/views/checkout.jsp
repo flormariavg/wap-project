@@ -15,7 +15,7 @@
 <body>
 	<img id="loader" class="loader" alt="loader img" src="images/loader-dots.gif" width="80px"/>
 	<div id="result" class="result">
-		<label id="msg"></label>
+		<label id="msg">${message}</label>
 	</div>
 	<!--  Free CSS Templates from www.templatemo.com -->
 	<div id="templatemo_container">
@@ -96,40 +96,40 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="name"></td>
+							<td><input name="name" required="required"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="address"></td>
+							<td><input name="address" required="required"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="city"></td>
+							<td><input name="city" required="required"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="state"></td>
+							<td><input name="state" required="required"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="country"></td>
+							<td><input name="country" required="required"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcode"></td>
+							<td><input name="zipcode" required="required"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumber"></td>
+							<td><input name="phonenumber" required="required"></td>
 						</tr>
 					</table>
 					<br>
 					<p class="border-bottom left">
 						<strong>2. Payment Method</strong>
 					</p>
-					<table class="table_ckeckout">
+					<table class="table_ckeckout" >
 						<tr>
-							<label><input type="radio" name="payment" value="credit">
+							<label><input type="radio" name="payment" value="credit" checked="checked">
 								CreditCard</label>
 							<br>
 						</tr>
@@ -150,31 +150,31 @@
 					<table class="table_ckeckout">
 						<tr>
 							<td>Name:</td>
-							<td><input name="namebill"></td>
+							<td><input name="namebill" required="required"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input name="addressbill"></td>
+							<td><input name="addressbill" required="required"></td>
 						</tr>
 						<tr>
 							<td>City:</td>
-							<td><input name="citybill"></td>
+							<td><input name="citybill" required="required"></td>
 						</tr>
 						<tr>
 							<td>State:</td>
-							<td><input name="statebill"></td>
+							<td><input name="statebill" required="required"></td>
 						</tr>
 						<tr>
 							<td>Country:</td>
-							<td><input name="countrybill"></td>
+							<td><input name="countrybill" required="required"></td>
 						</tr>
 						<tr>
 							<td>ZipCode:</td>
-							<td><input name="zipcodebill"></td>
+							<td><input name="zipcodebill" required="required"></td>
 						</tr>
 						<tr>
 							<td>Phone number:</td>
-							<td><input name="phonenumberbill"></td>
+							<td><input name="phonenumberbill" required="required"></td>
 						</tr>
 					</table>
 				</div>

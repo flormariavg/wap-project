@@ -66,5 +66,9 @@ public class User implements Serializable {
 	public void setShoppingCart(ShoppingCart shoppingCart) {
 		this.shoppingCart = shoppingCart;
 	}
+	@Override
+	public String toString() {
+		return  username;
+	}
 
 }

@@ -45,10 +45,10 @@
     function display(data) {
     	//To do the call to Transaction.commitTransaction
     	$("#msg").empty();
-		$("#msg").append("Your order is confirmed!!! Thank you for shopping at FSH Bookstore");
-		setTimeout(() => {
-			$("#result").hide();
-		}, 5000);
+	//	$("#msg").append("Your order is confirmed!!! Thank you for shopping at FSH Bookstore");
+		//setTimeout(() => {
+			//$("#result").hide();
+		//}, 5000);
     }
 
     function ajaxFailure() {
