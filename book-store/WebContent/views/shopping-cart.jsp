@@ -70,7 +70,7 @@
 									<h3> ${product.quantity}</h3>
 									<div class="buy_now_button">
 										<button button
-											onclick="deleteFromCart('${product.item.code}')">Delete</button>
+											onclick="deleteFromCart('${product.item.code}','${product.quantity}')">Delete</button>
 									</div>
 								</div>
 								<div class="cleaner">&nbsp;</div>
