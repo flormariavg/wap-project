@@ -63,13 +63,13 @@ function addToCart(itemId) {
 	.always($("#loader").hide());
 }
 
-function deleteFromCart(itemId) {
+function deleteFromCart(itemId,ItemQuantity) {
 	$("#result").show();
 	$("#loader").show();
 	$.ajax({
 		url : `itemManager`,
 		type : 'GET',
-		data : `item=${itemId}&action=delete`,
+		data : `item=${itemId}&action=delete&itemQuantity=${ItemQuantity}`,
 		success : function(data) {
 			$('#templatemo_content_left').load('cart #templatemo_content_left');
 			//location.reload();

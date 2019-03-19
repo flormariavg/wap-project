@@ -40,8 +40,10 @@ public class ItemController extends HttpServlet {
 		
 		String action = request.getParameter("action");
 		String code = request.getParameter("item");
+		String quantity = request.getParameter("itemQuantity");
 		
 		System.out.println(code);
+		System.out.println(quantity);
 		
 		HttpSession session = request.getSession();
 		ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
@@ -50,17 +52,19 @@ public class ItemController extends HttpServlet {
 			shoppingCart = new ShoppingCart();
 		
 		DataAccess da = new DataAccessFacade();
+		
 		Item item = da.findItemByCode(code);
 		Product product = new Product();
 		product.setItem(item);
-		product.setQuantity(1);
+		
 		
 		if(action.equals("add")) {
+			product.setQuantity(1);
 			shoppingCart.addProducts(product);
 			System.out.println("shoppingCart" + shoppingCart);
 			session.setAttribute("shoppingCart", shoppingCart);
 		}else {
-			
+			product.setQuantity(Integer.parseInt(quantity));
 			shoppingCart.delete(product);
 			session.setAttribute("shoppingCart", shoppingCart);
 			
