@@ -13,10 +13,10 @@
 
 # Functionalities
 
-#### Login
-#### Register users, 
-#### Add / Delete to Cart
-#### Checkout.
+#### -Login
+#### -Register users, 
+#### -Add / Delete to Cart
+#### -Checkout.
 
 
 # Authors
